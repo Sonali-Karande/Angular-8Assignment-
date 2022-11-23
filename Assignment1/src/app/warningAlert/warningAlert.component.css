@@ -1,0 +1,17 @@
+h1{
+    background-color: brown;
+    color: white;
+}
+h3{
+    background-color: blanchedalmond;
+    color: rgb(190, 13, 13);
+}
+h2{
+    background-color: pink;
+    border: 1px solid purple;
+    width: 100%;
+    text-align: center;
+    color:red;
+    padding: 10px;
+    
+}
