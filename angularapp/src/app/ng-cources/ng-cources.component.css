@@ -1,0 +1,16 @@
+.box{
+    background-color: brown;
+    color: white;
+    position: absolute;
+    top: 250px;
+    left: 220px;
+    height: 40%;
+    width: 50%;
+    border-radius: 3px solid green;
+    padding: 2px;
+    border-radius: 10px;
+}
+table,th.tr.td{
+    border: 2px solid rgb(165, 100, 16);
+    color: white;
+}

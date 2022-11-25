@@ -1,0 +1,27 @@
+<div class="box1">
+    <h3 style="background-color: rgb(21, 255, 0);color:white">*ngSwitch Example</h3>
+
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" (change)="getProductValue($event)" >
+                <option value="Default">Select Language</option>
+                <option value="Marathi">Marathi</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Telagu">Telagu</option>
+                <option value="Gujarati">Gujarati</option>
+                <option value="Panjabi">Panjabi</option>
+            </select>
+        </div>
+        <div class="col-md-12" [ngSwitch]="selectedLanguage">
+            <h2 class="text-success" *ngSwitchDefault>Please select Language</h2>
+            <h2 class="text-success" *ngSwitchCase="'Marathi'">Marathi</h2>
+            <h2 class="text-success" *ngSwitchCase="'English'">English</h2>
+            <h2 class="text-success" *ngSwitchCase="'Hindi'">Hindi</h2>
+            <h2 class="text-success" *ngSwitchCase="'Telagu'">Telagu</h2>
+            <h2 class="text-success" *ngSwitchCase="'Gujarati'">Gujarati</h2>
+            <h2 class="text-success" *ngSwitchCase="'Panjabi'">Panjabi</h2>
+
+        </div>
+    </div>
+</div>

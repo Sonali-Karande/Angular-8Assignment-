@@ -1,0 +1,26 @@
+
+
+<div class="box">
+    <h3 style="background-color: rgb(21, 255, 0);color:white">*ngFor Example</h3>
+
+    <div>
+        {{title}}
+    </div>
+    <table  class="table">
+<tr>
+    <th>No.</th>
+    <th>Course Name</th>
+    <th>Course Fee</th>
+    <th>Course Duration</th>
+</tr>
+<tbody>
+    <tr *ngFor="let course of courses">
+        <td>{{course.srNo}}</td>
+        <td>{{course.courseName}}</td>
+        <td>{{course.courseFee}}</td>
+        <td>{{course.courseDuration}}</td>
+
+    </tr>
+</tbody>
+    </table>
+</div>

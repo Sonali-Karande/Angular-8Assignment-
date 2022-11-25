@@ -1,0 +1,11 @@
+.box1{
+    background-color: brown;
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 220px;
+    height: 30%;
+    width: 50%;
+    padding: 3px;
+    border-radius: 10px;
+}
