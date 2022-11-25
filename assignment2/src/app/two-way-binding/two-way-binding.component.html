@@ -1,0 +1,9 @@
+<div class="box">
+  <ol>
+    <li><label>Enter User Name</label><input type="text" name="name1" [(ngModel)]="userName" ></li>
+    <li><label>User Name is:</label>User Name is:{{userName}}</li>
+    <li>Clickable Username!=Empty:<button [disabled]="!userName">Submit</button></li>
+    <!-- <li>Clickable Username!=Empty:<button (click)="onReset()" >Submit</button></li> -->
+    <li><input type="reset"  (click)="onReset()"></li>
+  </ol>
+</div>

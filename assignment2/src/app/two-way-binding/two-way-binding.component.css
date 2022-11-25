@@ -1,0 +1,19 @@
+.box{
+   
+    height: 200px;
+    width:350px;
+    background-color: blueviolet;
+    color: aliceblue;
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    top: 40%;
+    left: 40%;
+    margin: -100px 0 0 -150px;
+}
+li{
+    text-align: left;
+   padding: 10px;
+    background-color: blueviolet;
+    color: aliceblue;
+}

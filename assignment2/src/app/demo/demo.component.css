@@ -1,0 +1,12 @@
+.col-xs-12{
+    height: 200px;
+    width:350px;
+    background-color: blueviolet;
+    color: aliceblue;
+    position: absolute;
+    width: 700px;
+    height: 220px;
+    top: 80%;
+    left: 40%;
+    margin: -100px 0 0 -150px;
+}
