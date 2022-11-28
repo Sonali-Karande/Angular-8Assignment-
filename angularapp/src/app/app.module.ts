@@ -11,6 +11,8 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { DirectivesassComponent } from './directivesass/directivesass.component';
 import { NgCourcesComponent } from './ng-cources/ng-cources.component';
 import { NgswithassComponent } from './ngswithass/ngswithass.component';
+import { AttriComponent } from './attri/attri.component';
+import { CustdirDirective } from './custdir.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { NgswithassComponent } from './ngswithass/ngswithass.component';
     NgswitchComponent,
     DirectivesassComponent,
     NgCourcesComponent,
-    NgswithassComponent
+    NgswithassComponent,
+    AttriComponent,
+    CustdirDirective
   ],
   imports: [
     BrowserModule,
