@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-4">
             <select class="form-control" (change)="getProductValue($event)" >
@@ -9,7 +9,7 @@
                 <option value="WashingMachine">WashingMachine</option>
             </select>
         </div>
-        <div class="col-md-12" [ngSwitch]="selectedProduct">
+        <div class="col-md-8" [ngSwitch]="selectedProduct">
             <h2 class="text-success" *ngSwitchDefault>Please select product</h2>
             <h2 class="text-success" *ngSwitchCase="'Laptop'">Laptop</h2>
             <h2 class="text-success" *ngSwitchCase="'Mobile'">Mobile</h2>

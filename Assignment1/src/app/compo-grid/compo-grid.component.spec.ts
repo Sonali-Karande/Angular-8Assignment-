@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DemodirectivesComponent } from './demodirectives.component';
+import { CompoGridComponent } from './compo-grid.component';
 
-describe('DemodirectivesComponent', () => {
-  let component: DemodirectivesComponent;
-  let fixture: ComponentFixture<DemodirectivesComponent>;
+describe('CompoGridComponent', () => {
+  let component: CompoGridComponent;
+  let fixture: ComponentFixture<CompoGridComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DemodirectivesComponent ]
+      declarations: [ CompoGridComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DemodirectivesComponent);
+    fixture = TestBed.createComponent(CompoGridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
