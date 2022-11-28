@@ -7,7 +7,28 @@ import { Courses } from '../models/cources';
   styleUrls: ['./compo-grid.component.css']
 })
 export class CompoGridComponent implements OnInit {
+name:string="";
+password:any="";
+rePassword:any="";
+msg:any="";
+showMsg()
+{
+  if (this.password===this.rePassword) {
+    this.msg="Login Successful";
+  }
+  else
+  {
+    this.msg="Password is not Matched";
 
+  }
+}
+clear()
+{
+  this.name="";
+  this.password="";
+  this.rePassword="";
+  this.msg="";
+}
   isShow:boolean=true;
   title:string=`Angular Courses`;
   courses:Courses[]=[

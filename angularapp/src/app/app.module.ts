@@ -13,6 +13,8 @@ import { NgCourcesComponent } from './ng-cources/ng-cources.component';
 import { NgswithassComponent } from './ngswithass/ngswithass.component';
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
+import { CustPassComponent } from './cust-pass/cust-pass.component';
+import { MatchValueDirective } from './match-value.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { CustdirDirective } from './custdir.directive';
     NgCourcesComponent,
     NgswithassComponent,
     AttriComponent,
-    CustdirDirective
+    CustdirDirective,
+    CustPassComponent,
+    MatchValueDirective
   ],
   imports: [
     BrowserModule,
