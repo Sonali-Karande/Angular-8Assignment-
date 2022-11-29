@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Movie } from '../models/movies';
 
 @Component({
@@ -17,10 +17,13 @@ movies:Movie[]=[
 
 
 ]
+@Input() myinputMsg:string;
 
   constructor() { }
 
   ngOnInit() {
+    console.log(`From Parent` ,this.myinputMsg);
+    
   }
 
 }

@@ -1,0 +1,25 @@
+
+<div class="container">
+<table class="table ">
+    <thead>
+    <tr>
+        <th>ID</th>
+
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Age</th>
+        <th>Gender</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let emp of  empInfo;">
+<td>{{emp.id}}</td>
+
+<td>{{emp.name}}</td>
+<td>{{emp.salary}}</td>
+<td>{{emp.age}}</td>
+<td>{{emp.gender}}</td>
+    </tr>
+</tbody>
+</table>
+</div>

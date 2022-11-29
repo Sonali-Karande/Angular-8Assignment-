@@ -14,7 +14,7 @@ msg:any="";
 showMsg()
 {
   if (this.password===this.rePassword) {
-    this.msg="Login Successful";
+    this.msg="Login Successful ";
   }
   else
   {

@@ -15,6 +15,9 @@ import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { CustPassComponent } from './cust-pass/cust-pass.component';
 import { MatchValueDirective } from './match-value.directive';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeFilterComponent } from './employee-filter/employee-filter.component';
+import { AtinputdecoComponent } from './atinputdeco/atinputdeco.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { MatchValueDirective } from './match-value.directive';
     AttriComponent,
     CustdirDirective,
     CustPassComponent,
-    MatchValueDirective
+    MatchValueDirective,
+    EmployeeComponent,
+    EmployeeFilterComponent,
+    AtinputdecoComponent
   ],
   imports: [
     BrowserModule,

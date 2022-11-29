@@ -20,3 +20,11 @@
 </ul>
 <p>Normal para</p>
 <p appCustdir>Custom  para</p>
+<!-- <input type="text" name="" id=""  #uusername (keyup.enter)="show(uusername.value)"> -->
+<input type="text" name="" id=""  #uusername>
+
+<button (click)="show(uusername.value)">Show</button>
+
+<div>{{uName}}</div>
+<app-demodirectives [myinputMsg]="uName"></app-demodirectives>
+<!-- //parent to child --> 

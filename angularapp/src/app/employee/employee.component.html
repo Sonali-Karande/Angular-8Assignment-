@@ -1,0 +1,32 @@
+ <div class="container">
+    <app-employee-filter
+    [all]="getAllEmployeeCount()" 
+    [Male]="getMaleEmployeeCount()"
+    [Female]="getFeamleEmployeeCount()">
+</app-employee-filter>
+ </div>
+ 
+ 
+ <table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+<td>{{employee.id}}</td>
+<td>{{employee.name}}</td>
+<td>{{employee.salary}}</td>
+<td>{{employee.age}}</td>
+<td>{{employee.gender}}</td>
+        </tr>
+        <tr *ngIf="employees.length===0">
+            <td colspan="4"></td>
+            <p>No Records Found</p>
+        </tr>
+    </tbody>
+ </table>

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-name:string=`CodeMind`;
+// name:string=`CodeMind`;
 serverID:number=37;
 serverStatus:string=`Online`;
 allowNewServer=false;

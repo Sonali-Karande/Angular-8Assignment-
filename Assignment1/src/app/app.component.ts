@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Assignment1 In Angular 8';
+  title = 'Assignments In Angular 8';
+data1="Sonali";
+data={
+  id:123,
+  name:"Sanjana",
+  Age:32,
+  salary:60000
+}
 }
