@@ -8,6 +8,7 @@ import { warningComponent } from './warningAlert/warningAlert.component';
 import { CompoGridComponent } from './compo-grid/compo-grid.component';
 import { FormsModule } from '@angular/forms';
 import { InputdeoratoerComponent } from './inputdeoratoer/inputdeoratoer.component';
+import { OutputdecoratorComponent } from './outputdecorator/outputdecorator.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { InputdeoratoerComponent } from './inputdeoratoer/inputdeoratoer.compone
     warningComponent,
     SuccessAlertComponent,
     CompoGridComponent,
-    InputdeoratoerComponent
+    InputdeoratoerComponent,
+    OutputdecoratorComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,13 @@
 <!-- <p>child component!</p> -->
-<div class="container container-sm container pt-5  pb-5  pl-5 bg-primary">
+<!-- <div class="container container-sm container pt-5  pb-5  pl-5 bg-primary">
 <h3 style="color:white;">@Input Decorator Assignment</h3>
 <h2>Employee id: {{name.id}}</h2>
 <h2>Employee Name:{{name.name}}</h2>
 <h2>Employee Age :{{name.Age}}</h2>
 <h2>Employee Salary:{{name.salary}}</h2>
-</div>
+</div> --> 
+<p>Enter food name</p>
+
+<!-- steps 1 user entering foods name   -->
+<input type="text" (keyup.enter)="addtofood(item.value)" #item>
+   
