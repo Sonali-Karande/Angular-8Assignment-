@@ -18,6 +18,7 @@ movies:Movie[]=[
 
 ]
 @Input() myinputMsg:string;
+@Input()employee:any;
 
   constructor() { }
 

@@ -14,4 +14,19 @@ data={
   Age:32,
   salary:60000
 }
+foods: string[] = [];
+
+  getDataFromChild(value) {
+    console.log(value);
+    this.foods.push(value);
+  }
+  
+  newArrayOfCourses:any[]=[];
+ 
+
+  getCourcesFromChild(value){
+this.newArrayOfCourses=value;
+
+  }
+
 }

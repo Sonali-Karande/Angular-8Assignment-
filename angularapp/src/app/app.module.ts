@@ -18,6 +18,9 @@ import { MatchValueDirective } from './match-value.directive';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeFilterComponent } from './employee-filter/employee-filter.component';
 import { AtinputdecoComponent } from './atinputdeco/atinputdeco.component';
+import { HookComponent } from './hook/hook.component';
+import { ParentNgonchangesComponent } from './parent-ngonchanges/parent-ngonchanges.component';
+import { ClildNgonchangesComponent } from './clild-ngonchanges/clild-ngonchanges.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { AtinputdecoComponent } from './atinputdeco/atinputdeco.component';
     MatchValueDirective,
     EmployeeComponent,
     EmployeeFilterComponent,
-    AtinputdecoComponent
+    AtinputdecoComponent,
+    HookComponent,
+    ParentNgonchangesComponent,
+    ClildNgonchangesComponent
   ],
   imports: [
     BrowserModule,

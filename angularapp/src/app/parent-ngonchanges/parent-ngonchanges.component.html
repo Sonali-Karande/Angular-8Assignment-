@@ -1,0 +1,21 @@
+
+
+
+
+<div class="card" style="width: 18rem;height: 36rem;background-color: pink ;margin-left:20rem;align-items:center ;">
+    <div class="card-body">
+      <h5 class="card-title">ngOnChanges</h5>
+      <div class="container ml-10 mt-10 border-success">
+        <div class="form-group ml-4 mt 4" >
+            <input type="text"class="form-control mt-10" placeholder="posts" [(ngModel)]="post">
+        </div>
+        <div><br>
+            <button class="btn btn-lg  ml-7 mt-3 btn-primary"  type="submit" (click)="AddPost(post)">Add posts</button>
+        </div>
+        <app-clild-ngonchanges [childPosts]="parentPost"></app-clild-ngonchanges>
+        
+        </div>
+        
+        
+    </div>
+  </div>

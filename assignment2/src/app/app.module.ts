@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DemoComponent } from './demo/demo.component';
+import { AdvanceChildComponent } from './advance-child/advance-child.component';
+import { AdvanceParentComponent } from './advance-parent/advance-parent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TwoWayBindingComponent,
-    DemoComponent
+    DemoComponent,
+    AdvanceChildComponent,
+    AdvanceParentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,5 @@
  <div class="container">
-    <app-employee-filter
-    [all]="getAllEmployeeCount()" 
-    [Male]="getMaleEmployeeCount()"
-    [Female]="getFeamleEmployeeCount()">
-</app-employee-filter>
- </div>
- 
+  
  
  <table class="table table-stripped">
     <thead>
@@ -30,3 +24,9 @@
         </tr>
     </tbody>
  </table>
+ <app-employee-filter
+ [all]="getAllEmployeeCount()" 
+ [Male]="getMaleEmployeeCount()"
+ [Female]="getFeamleEmployeeCount()">
+</app-employee-filter>
+</div>

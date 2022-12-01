@@ -7,13 +7,15 @@ import { Employee } from './models/employee';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public uid:number;
   title = 'angularapp';
   empInfo:Employee=new Employee();
   empObject=[]; //array
-
+EmployeeRecords:any[]=[{eName:"Sonali",eDept:"HR"},
+{eName:"Arjun",eDept:"Manager"},
+];
   constructor() {
    
-
     this.empObject.push({ id:111,name:'Sonali',salary:90000,age:32,gender:'Female'});
     this.empObject.push({ id:122,name:'Swati',salary:80000,age:31,gender:'Female'});
     this.empObject.push({ id:133,name:'Yogesh',salary:60000,age:35,gender:'Male'});

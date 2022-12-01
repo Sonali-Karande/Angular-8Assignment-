@@ -2,4 +2,45 @@
   <!-- <app-warn></app-warn>
   <app-success-alert></app-success-alert> -->
   <!-- <app-compo-grid></app-compo-grid> -->
- <app-inputdeoratoer [name]="data"></app-inputdeoratoer>
+ <!-- <app-inputdeoratoer [name]="data"></app-inputdeoratoer> -->
+
+
+<div>
+<!-- <app-inputdeoratoer  (foodevent)="getDataFromChild($event)">
+
+</app-inputdeoratoer>
+
+<ol *ngFor="let f of foods">
+  <li>
+    {{f}}
+  </li>
+</ol>
+
+</div>
+<div>=================================================================================================</div> -->
+<app-outputdecorator (coursesEvent)="getCourcesFromChild($event)"></app-outputdecorator>
+<div class="container mr-3 mt-3 ">
+
+<div>
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th>Course Id</th>
+      <th>Course Name</th>
+      <th>Course Fee</th>
+      <th>Course Duratione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let courseItems of newArrayOfCourses">
+      <td>{{courseItems.srNo}}</td>
+      <td>{{courseItems.courseName}}</td>
+      <td>{{courseItems.courseFee}}</td>
+      <td>{{courseItems.courseDuration}}</td>
+  
+    </tr>
+  </tbody>
+      </table>
+    </div>
+  </div>
+  
