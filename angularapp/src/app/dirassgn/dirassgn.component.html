@@ -1,0 +1,38 @@
+<!-- <p>dirassgn works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ol>
+                <li></li>
+            </ol>
+            <button class="btn btn-primary" (click)="showSecret=!showSecret" >Display Details</button>
+            <p *ngIf="showSecret">Secret Password=tuna</p>
+            <button class="btn btn-primary" (click)="onToggleDetails()" >Display Details</button>
+        <div *ngFor="let logItem of log"
+        [ngStyle="{backgroundColor:logItem>=5?'blue':`transparent`}"]
+        [ngClass]="{'white-text':logItem>=5}"> 
+            {{logItem}}
+        </div>
+        </div>
+    </div>
+</div> -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ol>
+                <li>Get one checkbox and Add and remove div content based on checkbox selected value/li>
+                <li>Create class for Courses and display top 3 courses using *ngFor</li>
+                <li>Take own example and implement ngswitchcase</li>
+                </ol>
+              
+            <!-- <button class="btn btn-primary" (click)="showSecret = !showSecret">Display Details</button> -->
+            <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+            <p *ngIf="showSecret">Secret Password = tuna</p>
+            <div *ngFor="let logItem of log"
+             [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue':'transparent' }" 
+             [ngClass]="{'white-text': logItem >= 5}">
+             {{logItem}}
+            </div>
+        </div>
+    </div>
+</div>

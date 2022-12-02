@@ -17,7 +17,7 @@ people:any[] = [
     "name": "Sumit",
     "country": "USA"
   },
-  {
+  { 
     "name": "Anup",
     "country": "HK"
   },

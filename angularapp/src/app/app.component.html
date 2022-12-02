@@ -10,19 +10,33 @@
 <!-- <app-attri></app-attri>  -->
  <!-- <app-demodirectives [myinputMsg]="uName"></app-demodirectives> 
  <app-cust-pass></app-cust-pass>  -->
-<app-employee></app-employee> -->
+<!-- <app-employee></app-employee> -->
 <!-- <app-atinputdeco [empInfo]="empObject"></app-atinputdeco> -->
-<!-- <div *ngFor="let e of EmployeeRecords">
+ <!-- <div *ngFor="let e of EmployeeRecords">
 <app-demodirectives [employee]="e"></app-demodirectives>
-</div>
+</div> -->
+
 <select (change)="uid=sid.value" #sid>
   <option selected disabled>No value selected</option>
 <option [value]="id" *ngFor="let id of [1,2,3,4]">
 {{id}}</option>
-</select>
-<app-hook [userid]="uid"></app-hook> -->
-<app-attri></app-attri>
+</select> 
+
+<div class="row" style="text-align:center;">
+  <div class="col-md-12">
+<input type="text" placeholder="enter value" (blur)="handleData($event)">
+
+<p>Product Name: <input type="text" placeholder="Enter product name" [(ngModel)]="name"></p>
+<p>Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"></p>
+<button class="btn btn-primary" (click)="updateProduct()">Update product</button>
+<app-hook [userid]="uid" [parentData]="data" [product]="product"></app-hook>
+</div>
+</div>
+
+
+<!-- <app-dirassgn></app-dirassgn> -->
 <!-- <app-parent-ngonchanges></app-parent-ngonchanges> -->
+
 <router-outlet></router-outlet>
  
   

@@ -9,6 +9,7 @@ import { CompoGridComponent } from './compo-grid/compo-grid.component';
 import { FormsModule } from '@angular/forms';
 import { InputdeoratoerComponent } from './inputdeoratoer/inputdeoratoer.component';
 import { OutputdecoratorComponent } from './outputdecorator/outputdecorator.component';
+import { AddRemoveTableContentComponent } from './add-remove-table-content/add-remove-table-content.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { OutputdecoratorComponent } from './outputdecorator/outputdecorator.comp
     SuccessAlertComponent,
     CompoGridComponent,
     InputdeoratoerComponent,
-    OutputdecoratorComponent
+    OutputdecoratorComponent,
+    AddRemoveTableContentComponent
   ],
   imports: [
     BrowserModule,

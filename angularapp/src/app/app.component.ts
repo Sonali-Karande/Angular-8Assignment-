@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Employee } from './models/employee';
+import { Product } from './models/product';
 
 @Component({
   selector: 'app-root',
@@ -23,4 +24,16 @@ EmployeeRecords:any[]=[{eName:"Sonali",eDept:"HR"},
     this.empObject.push({ id:155,name:'Mayuresh',salary:60000,age:20,gender:'Male'});
 
 }
+data;
+  name: string;
+  price: number;
+  product: Product = new Product();
+  handleData(value) {
+    this.data = value.target.value;
+  }
+  UpdateProduct(){
+    //this.product=new Product;
+    this.product.name=this.name;
+    this.product.price=this.price;
+  }
 }

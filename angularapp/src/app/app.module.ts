@@ -21,6 +21,7 @@ import { AtinputdecoComponent } from './atinputdeco/atinputdeco.component';
 import { HookComponent } from './hook/hook.component';
 import { ParentNgonchangesComponent } from './parent-ngonchanges/parent-ngonchanges.component';
 import { ClildNgonchangesComponent } from './clild-ngonchanges/clild-ngonchanges.component';
+import { DirassgnComponent } from './dirassgn/dirassgn.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ClildNgonchangesComponent } from './clild-ngonchanges/clild-ngonchanges
     AtinputdecoComponent,
     HookComponent,
     ParentNgonchangesComponent,
-    ClildNgonchangesComponent
+    ClildNgonchangesComponent,
+    DirassgnComponent
   ],
   imports: [
     BrowserModule,
