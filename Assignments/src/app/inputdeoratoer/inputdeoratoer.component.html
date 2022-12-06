@@ -10,4 +10,35 @@
 
 <!-- steps 1 user entering foods name   -->
 <input type="text" (keyup.enter)="addtofood(item.value)" #item>
-   
+    <div>=============================================================</div>
+    <div class="container col-sm-6 mt-1 ml-5" [ngStyle]="{'background-color':'white','border':'2px solid green','width':'1050px' }">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Stud Id</th>
+
+              <th>Student Name</th>
+              <th>Degree</th>
+              <th>Pass Out Year</th>
+              <th>Address</th>
+              <th>Mobile</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr *ngFor="let item of studInfo;let i=index;">
+              <td>{{i+1}}</td>
+              <td> {{item.name}}</td>
+              <td>{{item.degree}}</td>
+              <td> {{item.passOutYear}}</td>
+              <td>{{item.address}}</td>
+              <td>{{item.mobile}}</td>
+              <td>{{item.email}}</td>
+              <td><button (click)="remove2(i)" class="btn btn-danger">Remove</button></td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>

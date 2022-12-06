@@ -18,9 +18,11 @@ export class ClildNgonchangesComponent implements OnInit {
   ngOnInit() {
     console.log("ChildNgonchangesComponent ngOnInit called")
   }
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(changes: {childPosts}): void {
   
     console.log("ChildNgonchangesComponent ngOnChanges called");
+    console.log(this.childPosts);
+    
     for (const propname in changes) {
       const prop = changes[propname];
 

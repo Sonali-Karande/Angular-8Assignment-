@@ -1,8 +1,8 @@
-<div class="container  mr-3" >
-    <div class="row">
-      <div class="col-sm-6 mt-3" style="background-color:lightcyan;border:2px solid green ;">
+<!-- <div class="container  mr-3">
+  <div class="row">
+    <div class="col-sm-6 mt-3" style="background-color:lightcyan;border:2px solid green ;">
       <div class="container mt-3">
-        <input type="text" class="container ml-5 mb-3" #input  [(ngModel)]="name" placeholder="Enter name">
+        <input type="text" class="container ml-5 mb-3" #input [(ngModel)]="name" placeholder="Enter name">
         <button class="btn btn-primary mb-3" (click)="add(input.value)">Add Name</button>
         <button class="btn btn-danger mb-3" (click)="Onclear()">Clear Textbox</button>
       </div>
@@ -17,13 +17,135 @@
           </thead>
           <tbody>
             <tr *ngFor="let item of data;let i=index">
-                <td>{{item.name}}</td>
-                <td><button (click)="remove(i)" class="btn btn-danger">Remove</button></td>
-        
+              <td>{{item.name}}</td>
+              <td><button (click)="remove(i)" class="btn btn-danger">Remove</button></td>
+
           </tbody>
         </table>
       </div>
-    
-      </div>
+
     </div>
   </div>
+</div>
+<div>===========================================================================</div> -->
+
+
+
+      
+<div class="container">
+        <div class="row">
+          <div class="col-sm-6 mt-3" style="border:2px solid green;color: black;">
+            <div class="container mt-1">
+              <h3>Student Information </h3>
+              <table class="table table-striped">
+                <tr>
+                  <td> <label for="studName">Enter Student Name :</label> </td>
+                  <td>
+                    <input type="text"  [(ngModel)]="name"  #sn><br><br>
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td>
+                    <label for="studDegree" >Student Degree:</label>
+                  </td>
+                  <td>
+                    <input type="text"   [(ngModel)]="degree" #sd><br><br>
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td>
+                    <label for="studPassYear">Pass Out Year :</label>
+      
+      
+                  </td>
+                  <td>
+                    <input type="date"  [(ngModel)]="passOutYear" #spy>
+      
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td>
+                    <label for="studAdd">Address:</label>
+      
+                  </td>
+                  <td>
+                    <textarea name="textarea" id="txt"   [(ngModel)]="address" cols="10"
+                      rows="2" #sa></textarea><br><br>
+      
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td>
+                    <label for="mobNo">Mobile No:</label>
+      
+                  </td>
+                  <td>
+                    <input type="tel"  [(ngModel)]="mobile" #mn>
+      
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td>
+                    <label for="email">Email Address:</label>
+      
+                  </td>
+                  <td>
+                    <input type="email" [(ngModel)]="email" #em>
+      
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="btn btn-success" style="background-color:blue;color:white"
+                      (click)="addData(sn.value,sd.value,spy.value,sa.value,mn.value,em.value)" #sn,#sd,#spy,#sa,#mn,#em>Add To Table</button>
+                    
+                  </td>
+                  <td>
+                    <button class="btn btn-success" style="background-color:red;color:white"
+                      (click)="clear()" #sn,#sd,#spy,#sa,#mn,#em>Clear</button>
+                  </td>
+                  
+                </tr>
+              </table>
+            </div>
+    </div>
+      <div class="container col-sm-6 mt-1 ml-5" [ngStyle]="{'background-color':'white','border':'2px solid green','width':'1050px' }">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Stud Id</th>
+
+              <th>Student Name</th>
+              <th>Degree</th>
+              <th>Pass Out Year</th>
+              <th>Address</th>
+              <th>Mobile</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr *ngFor="let item of studInfo;let i=index;">
+              <td>{{i+1}}</td>
+              <td> {{item.name}}</td>
+              <td>{{item.degree}}</td>
+              <td> {{item.passOutYear}}</td>
+              <td>{{item.address}}</td>
+              <td>{{item.mobile}}</td>
+              <td>{{item.email}}</td>
+              <td><button (click)="remove2(i)" class="btn btn-danger">Remove</button></td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+   

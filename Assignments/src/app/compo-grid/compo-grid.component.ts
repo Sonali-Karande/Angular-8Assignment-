@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Courses } from '../models/cources';
+import { CustomerSalonService } from '../models/service';
+import { Student } from '../models/student';
 
 @Component({
   selector: 'app-compo-grid',
@@ -7,7 +9,7 @@ import { Courses } from '../models/cources';
   styleUrls: ['./compo-grid.component.css']
 })
 export class CompoGridComponent implements OnInit {
-name:string="";
+// name:string="";
 password:any="";
 rePassword:any="";
 msg:any="";
@@ -51,5 +53,43 @@ clear()
 
   ngOnInit() {
   }
+
+
+  cutInfo:CustomerSalonService[]=[];
+
+customerName:string;
+wantService:string;
+selectDate:Date;
+selectTime:Date;
+customerMobile:number;
+
+addData(b,c,d,e,f){
+  this.cutInfo.push({customerName:b,wantService:c,selectDate:d,selectTime:e,customerMobile:f});
+
+}
+studInfo:Student[]=[];
+    name:string="";
+
+    degree:string;
+      passOutYear:Date;
+      address:string;
+      mobile:number;
+      email:string;
+      addData2(a,b,c,d,e,f){
+        this.studInfo.push({name:a,degree:b,passOutYear:c,address:d,mobile:e,email:f});
+        }
+        remove2(indexValue){
+          this.studInfo.splice(indexValue,1)
+        }
+        clear2()
+        {
+          this.name='';
+          this.degree='';
+          this.passOutYear=null;
+          this.mobile=null;
+          this.email='';
+        }
+
+
 
 }

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 //import { EventEmitter } from 'protractor';
 import { EventEmitter } from '@angular/core';
+import { Student } from '../models/student';
 
 @Component({
   selector: 'app-inputdeoratoer',
@@ -9,6 +10,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class InputdeoratoerComponent implements OnInit {
 @Input() name;
+@Input()studInfo:Student;
 @Output() foodevent:EventEmitter<string>=new EventEmitter<string>();
   constructor() { }
 
@@ -16,12 +18,13 @@ export class InputdeoratoerComponent implements OnInit {
     console.log(this.name);
     
   }
+  //fun call  once user enter text box value
   addtofood(value) {
-    // foodevent is nothing but your custom event (foodevent)
+    // step 2 foodevent is nothing but your custom event (foodevent)
         this.foodevent.emit(value);
       }
   
 
-
+ 
 }
     

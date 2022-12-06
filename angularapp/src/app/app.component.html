@@ -24,19 +24,22 @@
 
 <div class="row" style="text-align:center;">
   <div class="col-md-12">
-<input type="text" placeholder="enter value" (blur)="handleData($event)">
+    <p>Color Name:<input type="text" placeholder="enter value" (blur)="handleData($event)"></p>
 
 <p>Product Name: <input type="text" placeholder="Enter product name" [(ngModel)]="name"></p>
 <p>Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"></p>
 <button class="btn btn-primary" (click)="updateProduct()">Update product</button>
-<app-hook [userid]="uid" [parentData]="data" [product]="product"></app-hook>
+<app-hook [userid]="uid" [parentData]="data" [product]="product">
+  <h1 #child>this is child content coming from parent component</h1>
+</app-hook>
 </div>
 </div>
 
 
 <!-- <app-dirassgn></app-dirassgn> -->
-<!-- <app-parent-ngonchanges></app-parent-ngonchanges> -->
+<app-parent-ngonchanges></app-parent-ngonchanges>
+
+
 
 <router-outlet></router-outlet>
- 
-  
+
