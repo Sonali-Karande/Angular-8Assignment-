@@ -30,7 +30,11 @@ data : string = 'red';
   product1: Product[] = [
     {name:"shampoo",price:121},{name:"oil",price:123},
   ];
-
+appChildExist:boolean=true;
+destroy()
+{
+  this.appChildExist=false;
+}
   handleData(value) {
     this.data = value.target.value;
   }

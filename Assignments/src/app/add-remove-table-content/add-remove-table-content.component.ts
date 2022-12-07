@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Student } from '../models/student';
 
 @Component({
@@ -10,6 +10,7 @@ export class AddRemoveTableContentComponent implements OnInit {
 
   data:any[]=[];
     constructor() { }
+
 
     ngOnInit() {
     }
