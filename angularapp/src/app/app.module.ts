@@ -22,6 +22,7 @@ import { HookComponent } from './hook/hook.component';
 import { ParentNgonchangesComponent } from './parent-ngonchanges/parent-ngonchanges.component';
 import { ClildNgonchangesComponent } from './clild-ngonchanges/clild-ngonchanges.component';
 import { DirassgnComponent } from './dirassgn/dirassgn.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { DirassgnComponent } from './dirassgn/dirassgn.component';
     HookComponent,
     ParentNgonchangesComponent,
     ClildNgonchangesComponent,
-    DirassgnComponent
+    DirassgnComponent,
+    SimpleformComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { InputdeoratoerComponent } from './inputdeoratoer/inputdeoratoer.component';
 import { OutputdecoratorComponent } from './outputdecorator/outputdecorator.component';
 import { AddRemoveTableContentComponent } from './add-remove-table-content/add-remove-table-content.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AddRemoveTableContentComponent } from './add-remove-table-content/add-r
     CompoGridComponent,
     InputdeoratoerComponent,
     OutputdecoratorComponent,
-    AddRemoveTableContentComponent
+    AddRemoveTableContentComponent,
+    SimpleformComponent
   ],
   imports: [
     BrowserModule,
