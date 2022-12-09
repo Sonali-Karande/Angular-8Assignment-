@@ -1,0 +1,34 @@
+.container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: gainsboro;
+    color: black;
+    font-size: larger;
+    font-style: inherit;
+  
+    font-weight: bolder;
+    width: 10012vh;
+    height: 850px;
+    }
+    input.ng-invalid.ng-touched{
+        border: 2px solid rgb(238, 34, 34);
+    
+    }
+    input,select{
+        box-shadow:0 0 4px inset;
+    }
+    body{
+   
+      background-color: rgb(226, 147, 43);
+        
+     }
+     .col-lg{
+        font-size: larger;
+    font-style: inherit;
+  
+    font-weight: bolder;
+    width: 10012vh;
+    height: 750px;
+     }
+    

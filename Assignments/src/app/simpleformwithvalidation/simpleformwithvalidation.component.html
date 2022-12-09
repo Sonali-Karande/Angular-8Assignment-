@@ -1,0 +1,149 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm border border-primary">
+            <h2>Student Registration Form</h2>
+
+            <form (ngSubmit)="onSubmit(studentForm)" #studentForm="ngForm">
+                <div ngModelGroup="nameDetails" #nameDetails="ngModelGroup">
+                    <div class="form-group">
+
+                        <label for="studname">Student Name</label>
+                        <input type="text" class="form-control" placeholder="Enter first name" value="fname"
+                            name="fname" id="fname" [(ngModel)]="fname" required>
+                        <small *ngIf="fname">First name is:{{fname}}</small>
+                        <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter middle name" value="mname"
+                            name="mname" [(ngModel)]="mname" required>
+                        <small *ngIf="mname">Middle name is:{{mname}}</small>
+                    </div>
+
+                        <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter last name" value="lname" name="lname"
+                            [(ngModel)]="lname" required>
+                        <small *ngIf="lname">Last name is:{{lname}}</small>
+                    </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" #dob="ngModel" value="dob" name="dob" ngModel required>
+                        <small class="text-danger" *ngIf="!dob.valid && dob.touched">Please enter valid date</small>
+
+                    </div>
+                    <small class="text-danger" *ngIf="!nameDetails.valid && nameDetails.touched">Please enter valid
+                        data</small>
+
+                </div>
+
+                <!-- <div class="form-group">
+
+                    <label for="studname">Student Name</label>
+                    <input type="text" class="form-control" placeholder="Enter first name" value="fname" name="fname" id="fname"
+                        [(ngModel)]="fname"  ngModel required>
+                   
+                    <input type="text" class="form-control" placeholder="Enter middle name" value="mname" name="mname" [(ngModel)]="mname" ngModel  required>
+
+                    <input type="text" class="form-control" placeholder="Enter last name" value="lname" name="lname" [(ngModel)]="lname" ngModel required>
+
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" #dob="ngModel" value="dob" name="dob" ngModel required>
+
+                </div>
+           
+         -->
+
+                <div class="form-group">
+
+                    <label for="gender">Gender:</label>&nbsp;&nbsp;
+                    <input type="radio" value="male" id="male" name="gender" ngModel checked>&nbsp;&nbsp;&nbsp;
+                    <label for="male">Male</label>&nbsp;&nbsp;&nbsp;
+
+                    <input type="radio" value="female" id="female" ngModel name="gender" ngModel>&nbsp;&nbsp;&nbsp;
+                    <label for="female">Female</label>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" #email="ngModel" email placeholder="abc@gmail.com"
+                        name="email" ngModel required>
+                    <small class="text-danger" *ngIf="!email.valid && email.touched">Please enter valid Email</small>
+
+                </div>
+                <div class="form-group">
+
+                    <div class="col-auto">
+                        <label>School</label>
+                        <select class="form-select" name="school" [ngModel]="defualtValue1">
+                            <option value="Jijamata girls hisghschool pune">Jijamata girls hisghschool pune</option>
+                            <option value="Kanya Prashala pune">Kanya Prashala pune</option>
+                            <option value="Renuka Swarup pune">Renuka Swarup pune</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-auto">
+                        <label>Department</label>
+                        <select class="form-select" name="department" [ngModel]="defualtValue2" required>
+                            <option value="Civil">Civil</option>
+                            <option value="Electrical and Electronics">Electrical and Electronics</option>
+                            <option value="Computer and Science">Computer and Science</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-auto">
+                        <label>Course</label>
+                        <select class="form-select" name="course" aria-placeholder="select" [ngModel]="defualtValue3"
+                            required>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Law">Law</option>
+                            <option value="Medical">Medical</option>
+                            <option value="B.A">B.A</option>
+                            <option value="B.COM">B.COM</option>
+                            <option value="B.SC">B.SC</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-12">
+                        <label class="form-label">Mobile No.</label>
+                        <input type="number" class="form-control" maxlength="10" placeholder="mobile no" name="mno"
+                            #mno="ngModel" ngModel required>
+                        <small class="text-danger" *ngIf="!mno.valid && mno.touched">Please enter valid Phone
+                            no.</small>
+
+                    </div>
+                </div>
+                <button type="submit" [disabled]="!studentForm.valid" class="btn btn-primary mr-1">Submit</button>
+                <button type="reset" class="btn btn-danger">Reset</button>
+
+            </form>
+
+        </div>
+        <div class="col-lg border border-primary">
+            <div class="row justify-content-center mt-2" *ngIf="submitted">
+                <div class="col-md-12 rounded shadow py-4">
+                    <h2>Form Data</h2>
+                    <p>First Name:<strong>{{student.fname}}</strong></p>
+                    <p>Middle Name:<strong>{{student.mname}}</strong></p>
+                    <p>Last Name:<strong>{{student.lname}}</strong></p>
+                    <p>Birthday:<strong>{{student.dob}}</strong></p>
+                    <p>Gender:<strong>{{student.gender}}</strong></p>
+                    <p>Email:<strong>{{student.email}}</strong></p>
+                    <p>School:<strong>{{student.school}}</strong></p>
+                    <p>Department:<strong>{{student.dept}}</strong></p>
+                    <p>Course:<strong>{{student.course}}</strong></p>
+                    <p>Mobile No.:<strong>{{student.mno}}</strong></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

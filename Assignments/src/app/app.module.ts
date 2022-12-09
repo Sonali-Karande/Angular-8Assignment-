@@ -11,6 +11,7 @@ import { InputdeoratoerComponent } from './inputdeoratoer/inputdeoratoer.compone
 import { OutputdecoratorComponent } from './outputdecorator/outputdecorator.component';
 import { AddRemoveTableContentComponent } from './add-remove-table-content/add-remove-table-content.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
+import { SimpleformwithvalidationComponent } from './simpleformwithvalidation/simpleformwithvalidation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SimpleformComponent } from './simpleform/simpleform.component';
     InputdeoratoerComponent,
     OutputdecoratorComponent,
     AddRemoveTableContentComponent,
-    SimpleformComponent
+    SimpleformComponent,
+    SimpleformwithvalidationComponent
   ],
   imports: [
     BrowserModule,
