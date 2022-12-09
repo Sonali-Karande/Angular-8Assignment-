@@ -1,50 +1,77 @@
-<table class="table table-bordered">
- 
-    <tbody>
-      <tr>
-        <td>Name</td>
-        <td>Otto</td>
- 
-      </tr>
-      <tr>
-        <td>DOB</td>
-        <td>Thornton</td>
-      </tr>
-      <tr>
-        <td colspan="2">Gender</td>
-        <td>@twitter</td>
-      </tr>
-      <tr>
-        <td>Email</td>
-        <td>Thornton</td>
-      </tr> 
-      <tr>
-        <td>Address</td>
-        <td>Thornton</td>
-      </tr>
-      <tr>
-        <td>School</td>
-        <td>Thornton</td>
-      </tr>
-      <tr>
-        <td>Department</td>
-        <td>Thornton</td>
-      </tr>
-      <tr>
-        <td>Course:</td>
-        <td>Thornton</td>
-      </tr>
-      <tr>
-        <td>Mobile No</td>
-        <td>Thornton</td>
-      </tr>
-      <tr>
-        <td>Submit</td>
-        <td>Thornton</td>
-      </tr>
-      <tr>
-        <td>Reset</td>
-        <td>Thornton</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-md-18 text left rounded shadow py-6">
+          
+          <form (ngSubmit)="onSubmit(studentForm)" #studentForm="ngForm">
+              <div class="row g-3">
+                  <div class="col">
+    <h2>Student Registration Form</h2>
+
+                    <label for="stud name" class="form-label">Student Name</label>
+                      <input type="text" class="form-control" placeholder="Enter name" name="sname" ngModel required>
+                 </div>
+                
+              </div>
+              <div class="col-12">
+                  <label class="form-label">Date of Birth</label>
+                  <input type="date" class="form-control" name="dob" ngModel required>
+              </div>
+              <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                <div class="col-sm-10">
+                    <div class="form-check" required>
+                        <input class="form-check-input" type="radio" name="exampleRadios">
+                        <label class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios">
+                        <label class="form-check-label">Female</label>
+                    </div>
+                </div>
+            </fieldset>
+              <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Email</label>
+                  <input type="email" class="form-control" email placeholder="abc@gmail.com" name="email" ngModel required>
+              </div>
+              <div class="col-auto">
+                  <label>School</label>
+                  <select class="form-select">
+                      <option selected>Select School...</option>
+                      <option value="1">Jijamata girls hisghschool pune</option>
+                      <option value="2">Kanya Prashala pune</option>
+                      <option value="3">Renuka Swarup pune</option>
+                  </select>
+              </div>
+              <div class="col-auto">
+                  <label>Department</label>
+                  <select class="form-select" name="Department" aria-placeholder="select" required>
+                      <option selected>Select Department...</option>
+                      <option value="1">Civil</option>
+                      <option value="2">Electrical and Electronics</option>
+                      <option value="3">Computer and Science</option>
+                  </select>
+              </div>
+              <div class="col-auto">
+                  <label>Course</label>
+                  <select class="form-select" name="course" aria-placeholder="select" required>
+                      <option selected>Choose Course...</option>
+                      <option value="1">Engineering</option>
+                      <option value="2">Law</option>
+                      <option value="3">Medical</option>
+                      <option value="3">B.A</option>
+                      <option value="3">B.COM</option>
+                      <option value="3">B.SC</option>
+                  </select>
+              </div>
+              <div class="col-12">
+                  <label class="form-label">Mobile No.</label>
+                  <input type="number" class="form-control" maxlength="10" placeholder="mobile no" name="mno" ngModel required>
+              </div>
+              <button type="submit" [disabled]="!studentForm.valid" class="btn btn-primary mr-1">Submit</button>
+              <button type="reset" class="btn btn-danger">Reset</button>
+        
+          </form>
+      </div>
+  </div>
+</div>
+

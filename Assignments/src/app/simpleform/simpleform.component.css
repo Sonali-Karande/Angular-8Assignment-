@@ -1,0 +1,23 @@
+.container{
+    background-color: gainsboro;
+    color: black;
+    font-size: x-small;
+    font-style: inherit;
+  
+    font-weight: bolder;
+    width: 70vh;
+    height: 650px;
+    }
+    input.ng-invalid.ng-touched{
+        border: 2px solid rgb(238, 34, 34);
+    
+    }
+    input,select{
+        box-shadow:0 0 4px inset;
+    }
+    body{
+   
+      background-color: rgb(226, 147, 43);
+        
+     }
+    

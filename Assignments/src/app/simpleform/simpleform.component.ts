@@ -12,7 +12,7 @@ export class SimpleformComponent implements OnInit {
 
   ngOnInit() {
   }
-  OnSubmit(form:NgForm) {
-    console.log(form);
-      }
+  onSubmit(studentForm:NgForm){
+    console.log(studentForm);
+  }
 }

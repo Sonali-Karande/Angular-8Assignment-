@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dirassgn.component.css']
 })
 export class DirassgnComponent implements OnInit {
-// showSecret=false;
- showSecret1=false;
-// log=[];
+
 showSecret = false;
 log = [];
   constructor() { }
@@ -20,11 +18,7 @@ log = [];
     this.log.push(this.log.length + 1) ;
   }
 
-//   onToggleDetails()
-//   {
-// this.showSecret1=!this.showSecret1;
-// this.log.push(this.log.length+1)
-//   }
+
   
 
 }

@@ -27,9 +27,7 @@ data : string = 'red';
   name: string;
   price: number;
    product: Product = new Product();
-  product1: Product[] = [
-    {name:"shampoo",price:121},{name:"oil",price:123},
-  ];
+
 appChildExist:boolean=true;
 destroy()
 {
