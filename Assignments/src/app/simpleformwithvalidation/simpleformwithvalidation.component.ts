@@ -20,10 +20,10 @@ student= new Student2();
   submitted:boolean=false;
   onSubmit(studentForm:NgForm){
     this.submitted = true;
-    this.student.fname=studentForm.value.fname;
-    this.student.mname=studentForm.value.mname;
-    this.student.lname=studentForm.value.lname;
-    this.student.dob=studentForm.value.dob;
+    this.student.fname=studentForm.value.nameDetails.fname;
+    this.student.mname=studentForm.value.nameDetails.mname;
+    this.student.lname=studentForm.value.nameDetails.lname;
+    this.student.dob=studentForm.value.nameDetails.dob;
     this.student.gender=studentForm.value.gender;
     this.student.email=studentForm.value.email;
     this.student.school=studentForm.value.school;
