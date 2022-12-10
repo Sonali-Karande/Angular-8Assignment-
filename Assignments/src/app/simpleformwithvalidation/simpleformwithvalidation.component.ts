@@ -13,7 +13,7 @@ export class SimpleformwithvalidationComponent implements OnInit {
   ngOnInit() {
   }
 student= new Student2();
-
+currentDate:any=new Date();
   defualtValue1:string="Jijamata girls hisghschool pune";
   defualtValue2:string="Computer and Science";
   defualtValue3:string="Engineering";

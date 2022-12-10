@@ -48,13 +48,20 @@
 
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="inputEmail4" class="form-label">Email</label>
                     <input type="email" class="form-control" #email="ngModel" email placeholder="abc@gmail.com"
                         name="email" ngModel required>
                     <small class="text-danger" *ngIf="!email.valid && email.touched">Please enter valid Email</small>
 
-                </div>
+                </div> -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email"class="form-control" id="email" #email="ngModel" placeholder="e.g. abc@codemindtechnology.com" name="email" pattern="^[a-zA-Z0-9]+@codemindtechnology\.[a-zA-z]+$" ngModel required/>
+                    <small class="text-danger" *ngIf="!email.valid && email.touched">Please enter valid Email  only @codemindtechnology.com</small>
+
+                    
+                  </div>
                 <div class="form-group">
 
                     <div class="col-auto">
@@ -94,18 +101,27 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="date">Regitration Date:</label><br>
+                    <input type="date" min="{{currentDate |date:'yyyy-MM-dd'}}" placeholder="Date">
+                </div>
 
-                    <div class="col-12">
+                <div class="form-group">
+
+                
                         <label class="form-label">Mobile No.</label>
                         <input type="number" class="form-control" maxlength="10" placeholder="mobile no" name="mno"
                             #mno="ngModel" ngModel required>
                         <small class="text-danger" *ngIf="!mno.valid && mno.touched">Please enter valid Phone
                             no.</small>
 
-                    </div>
-                </div>
+
+            
+                </div><br>
+           
+            
+      
                 <button type="submit" [disabled]="!studentForm.valid" class="btn btn-primary mr-1">Submit</button>
-                <button type="reset" class="btn btn-danger">Reset</button>
+                &nbsp; &nbsp; &nbsp; &nbsp; <button type="reset" class="btn btn-danger">Reset</button>
 
             </form>
 
@@ -113,7 +129,7 @@
         <div class="col-lg border border-primary">
             <div class="row justify-content-center mt-2" *ngIf="submitted">
                 <div class="col-md-12 rounded shadow py-4">
-                    <h2>Form Data</h2>
+                    <h2 style="color: beige;background-color:blue">Student Details</h2>
                     <p>First Name:<strong>{{student.fname}}</strong></p>
                     <p>Middle Name:<strong>{{student.mname}}</strong></p>
                     <p>Last Name:<strong>{{student.lname}}</strong></p>
