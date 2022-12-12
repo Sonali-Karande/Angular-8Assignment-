@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { DirectivesassComponent } from './directivesass/directivesass.component';
@@ -23,6 +23,7 @@ import { ParentNgonchangesComponent } from './parent-ngonchanges/parent-ngonchan
 import { ClildNgonchangesComponent } from './clild-ngonchanges/clild-ngonchanges.component';
 import { DirassgnComponent } from './dirassgn/dirassgn.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
+import { ReactiveformsdemoComponent } from './reactiveformsdemo/reactiveformsdemo.component';
 
 @NgModule({
   declarations: [
@@ -45,12 +46,14 @@ import { SimpleformComponent } from './simpleform/simpleform.component';
     ParentNgonchangesComponent,
     ClildNgonchangesComponent,
     DirassgnComponent,
-    SimpleformComponent
+    SimpleformComponent,
+    ReactiveformsdemoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
