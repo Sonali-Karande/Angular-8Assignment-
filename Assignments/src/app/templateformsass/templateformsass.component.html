@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row mt-4  rounded shadow py-4">
+        <div class="col-sm border border-primary rounded py-4">
+            <h2 style="color: beige;background-color:blue">Subscription Form</h2>
+
+            <form (ngSubmit)="onSubmit(subForm)" #subForm="ngForm">
+                <div class="form-group">
+
+                    <label for="userName">User Name</label>
+                    <input type="text" class="form-control" placeholder="Enter  name" name="userName" id="userName"
+                        [(ngModel)]="userName" required>
+                    <small *ngIf="userName">User name is:{{userName}}</small>
+                    <!-- <small class="text-danger" *ngIf="userName.touched">User name should not empty</small> -->
+
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" #email="ngModel"
+                        placeholder="codemindtechnology@gmail.com" name="email" pattern="codemindtechnology@gmail.com"
+                        ngModel required />
+                    <small class="text-danger" *ngIf="!email.valid && email.touched">Please enter valid Email only
+                        codemindtechnology@gmail.com</small>
+
+
+                </div>
+                <div class="form-group">
+
+                    <div class="col-auto">
+                        <label>Subscriptions:</label>
+                        <select class="form-select" name="Subscriptions" [ngModel]="defualtValue1">
+                            <option value="Basic">Basic</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Pro">Pro</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="password " #password="ngModel"
+                        placeholder="password" name="password" minlength="8" maxlength="12" ngModel required />
+                    <!-- <small class="text-danger" *ngIf="!password.valid && password.touched">Password should not be empty</small> -->
+                    <small class="text-danger" *ngIf="!password.valid && password.touched">Password should not be empty
+                        and it should be 8 to
+                        12 character long
+                    </small>
+
+
+                </div>
+                <br>
+
+                <button type="submit" class="btn btn-primary ml-5">Submit</button>
+                <h3 class="text-danger">{{msg}}</h3>
+
+            </form>
+
+        </div>
+        <div class="col-lg border border-primary">
+            <div class="row justify-content-center mt-2" *ngIf="submitted">
+                <div class="col-md-12 rounded shadow py-4">
+                    <h2 style="color: beige;background-color:blue">Subscription Details</h2>
+                    <p>User Name:<strong>{{sub.userName}}</strong></p>
+                    <p>Email:<strong>{{sub.email}}</strong></p>
+                    <p>Subscriptions:<strong>{{sub.subscription}}</strong></p>
+                    <p>Password:<strong>{{sub.password}}</strong></p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

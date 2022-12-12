@@ -12,6 +12,7 @@ import { OutputdecoratorComponent } from './outputdecorator/outputdecorator.comp
 import { AddRemoveTableContentComponent } from './add-remove-table-content/add-remove-table-content.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { SimpleformwithvalidationComponent } from './simpleformwithvalidation/simpleformwithvalidation.component';
+import { TemplateformsassComponent } from './templateformsass/templateformsass.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SimpleformwithvalidationComponent } from './simpleformwithvalidation/si
     OutputdecoratorComponent,
     AddRemoveTableContentComponent,
     SimpleformComponent,
-    SimpleformwithvalidationComponent
+    SimpleformwithvalidationComponent,
+    TemplateformsassComponent
   ],
   imports: [
     BrowserModule,
