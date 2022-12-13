@@ -28,7 +28,7 @@ export class ReactiveformassComponent implements OnInit {
   msg:string="";
   naNames(control:FormControl){
 if (this.notAllowedNames.indexOf(control.value)!==-1) {
-this.msg=`names not alowed ${this.notAllowedNames[0]}`;
+
   return{'notAllowedNames':true};
 }
 {
