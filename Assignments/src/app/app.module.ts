@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { warningComponent } from './warningAlert/warningAlert.component';
 import { CompoGridComponent } from './compo-grid/compo-grid.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputdeoratoerComponent } from './inputdeoratoer/inputdeoratoer.component';
 import { OutputdecoratorComponent } from './outputdecorator/outputdecorator.component';
 import { AddRemoveTableContentComponent } from './add-remove-table-content/add-remove-table-content.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { SimpleformwithvalidationComponent } from './simpleformwithvalidation/simpleformwithvalidation.component';
 import { TemplateformsassComponent } from './templateformsass/templateformsass.component';
+import { ReactiveformassComponent } from './reactiveformass/reactiveformass.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,14 @@ import { TemplateformsassComponent } from './templateformsass/templateformsass.c
     AddRemoveTableContentComponent,
     SimpleformComponent,
     SimpleformwithvalidationComponent,
-    TemplateformsassComponent
+    TemplateformsassComponent,
+    ReactiveformassComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

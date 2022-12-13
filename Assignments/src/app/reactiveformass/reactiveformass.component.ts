@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-reactiveformsdemo',
-  templateUrl: './reactiveformsdemo.component.html',
-  styleUrls: ['./reactiveformsdemo.component.css']
+  selector: 'app-reactiveformass',
+  templateUrl: './reactiveformass.component.html',
+  styleUrls: ['./reactiveformass.component.css']
 })
-export class ReactiveformsdemoComponent implements OnInit {
+export class ReactiveformassComponent implements OnInit {
   myReactiveForm: FormGroup;
   constructor() {
     this.createForm();
