@@ -2,3 +2,21 @@ input.ng-invalid.ng-touched {
     border: 1px solid red;
     box-shadow: 0 0 13px #ff000021;
 }
+.btn-add{
+    font-size: 12px;
+    font-weight: 700px;
+    color:rgb(0,0,0,0.397);
+}
+.btn-add i{
+    font-size: 37px;
+    line-height: 15px;
+    display: inline;
+    position: relative;
+    top: 7px;
+    margin-right: 3px;
+}
+.btn-add:hover{
+    border:1px solid blue;
+    background: wheat;
+    color:blueviolet;
+}
