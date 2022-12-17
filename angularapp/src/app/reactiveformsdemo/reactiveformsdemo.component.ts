@@ -90,5 +90,6 @@ if (this.notAllowedNames.indexOf(control.value)!==-1) {
   OnAddSkill(){
 (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null,Validators.required));
   }
+  
 
 }

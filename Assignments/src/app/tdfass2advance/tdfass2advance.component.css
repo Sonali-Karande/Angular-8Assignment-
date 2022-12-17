@@ -1,0 +1,47 @@
+input.ng-invalid.ng-touched{
+    border: 2px solid rgb(238, 34, 34);
+
+}
+label{
+    font-size: xx-large;
+    font-weight: bold;
+    color: rgb(107, 20, 220);
+}
+input[type=text],input[type=email],input[type=number],input[type=select] {
+    padding: 0;
+    height: 40px;
+    background-color: black;
+    position: relative;
+    left: 0;
+    border: 1px solid #372c44;
+    background-color: white;
+    font-size: 30px;
+    border-radius: 7px;
+
+  }
+  select {
+    padding: 0;
+    height: 40px;
+    background-color: black;
+    position: relative;
+    left: 0;
+    border: 1px solid #372c44;
+    border-radius: 7px;
+    background-color: white;
+    font-size: 30px
+}
+.container-fluid{
+     background-image: url(/assets/images/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg); 
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10px;
+    padding-left: 50px;
+    width: 100vw;
+    height: 100vh;
+  }
+  small{
+    font-size: large;
+    font-weight: bold;
+  }
+  

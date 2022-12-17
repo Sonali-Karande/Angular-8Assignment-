@@ -1,0 +1,187 @@
+<!-- REQUIREMENTS:
+ First Name [Required, Min 5 and max 5 char]
+ Last Name [Max 10 char]
+ Age [Required, B/W 17-20]
+ Email [Required, Validate email]
+ Phone [Max 10, Allow only numbers]
+ City (Dropdown) Options:['Mumbai','Kolkata','Delhi']
+ Gender [Required]
+ Password [Required]
+ Confirm Password [Required] -->
+<!-- mobNumberPattern = "^((\\+91-?)|0)?[0-9]{10}$";  
+ passwordPtn ='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$'
+ emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" -->
+<div class="container-fluid rounded shadow py-4">
+    <div class="row mt-4  rounded shadow py-4">
+        <h1 style="color: rgb(235, 15, 140);margin-bottom: 10px;">Student Registration</h1>
+        <div class="col-sm border border-primary rounded py-4">
+            <h2  style="color: rgb(235, 15, 140)">Student Registration Form</h2>
+<div class="container row mt-4  rounded shadow py-4">
+
+            <form (ngSubmit)="onSubmit(studentForm)" #studentForm="ngForm">
+                <div class="form-group">
+
+                    <label for="fname">Student First name:</label>
+                    <input type="text" class="form-control" placeholder="Enter First name..." name="fname" id="fname"
+                        #fname="ngModel" minlength="5" maxlength="5" ngModel required>
+                    <small class="text-danger" *ngIf="(fname.touched && !fname.valid) || fname.error?.minlength">
+                        First name is required and Enter atleast 5 characters</small>
+
+
+                </div>
+                <div class="form-group">
+
+                    <label for="lname">Student Last Name:</label>
+                    <input type="text" class="form-control" placeholder="Enter last name..." name="lname" id="lname"
+                        #lname="ngModel" minlength="5" maxlength="10" ngModel required>
+                    <small class="text-danger"
+                        *ngIf="(lname.touched && !lname.valid) || lname.error?.minlength ||lname.error?.required">
+                        last name is required and Enter atleast 10 characters</small>
+
+
+                </div>
+
+
+                <div class="form-group ">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" #age="ngModel" age id="age" name="age" required
+                        placeholder="17" pattern="[17-9]{2}" ngModel>
+                    <small class="text-danger r3" *ngIf="!age.valid && age.touched"><small *ngIf="!age.pattern"
+                            class="r3"><b>Please enter age between 17 to 20.</b></small></small>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" #email="ngModel"
+                        placeholder="codemindtechnology@gmail.com" name="email"
+                        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ngModel required />
+                    <small class="text-danger" *ngIf="!email.valid && email.touched">Please enter valid Email</small>
+                </div>
+
+                <div class="form-group">
+
+                    <label for="mobile">Mobile:</label>
+                    <input type="text" class="form-control" placeholder="Enter mobile..." name="mobile" id="mobile"
+                        minlength="10" pattern="^((\\+91-?)|0)?[0-9]{10}$" #mobile="ngModel" ngModel required>
+                    <small class="text-danger"
+                        *ngIf="(mobile.touched && !mobile.valid) || mobile.error?.required || mobile.error?.pattern || mobile.error?.minlength">Mobile
+                        no is
+                        required and valid mobile
+                        number starting with 9 minimum length is 10 !</small>
+
+
+                </div><br>
+                <div class="form-group">
+                    <label for="city">City:</label>&nbsp;&nbsp;&nbsp;
+                    <select class="form-select" name="city" aria-placeholder="select" [ngModel]="defualtValue" required>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="usename">Gender:</label>
+
+                    <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                            <input type="radio" id={{gender.id}} id="" name="gender" value={{gender.value}} class="custo-control-input" [ngModel]="defaultgender">
+                          <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+                       
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter password "
+                        required #password="ngModel" [(ngModel)]="password.password" />
+
+                    <span class="text-danger" *ngIf="!password.valid && (password.touched || submitted)">
+                        <span *ngIf="password.errors">
+                            password should not be empty please enter valid password</span></span>
+
+
+
+                </div>
+                <div class="form-group">
+                    <label for="conpass">Confirm Password:</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" class="form-control"
+                        placeholder="Reenter password " required [(ngModel)]="confirmPassword.confirmPassword"
+                        #confirmPassword="ngModel" />
+                    <!-- to check confirm password is valid or not -->
+                    <span class="text-danger" *ngIf="!confirmPassword.valid && (confirmPassword.touched || submitted)">
+
+                        <span *ngIf="confirmPassword.errors">
+                            Confirm password should not be empty</span></span>
+
+                    <!-- to compare password  -->
+                    <span class="text-danger"
+                        *ngIf="confirmPassword.confirmPassword != password.password && !confirmPassword.confirmPassword == ''">
+                        Password does not match, please enter same as password</span>
+
+                </div>
+
+                <br>
+
+                <button type="submit" [disabled]="!studentForm.valid" class="btn btn-primary ml-5">Submit</button>
+                <h3 class="text-danger">{{msg}}</h3>
+
+            </form>
+        </div>
+
+        </div>
+        <div class="col-lg border border-primary" *ngIf="show" >
+            <div class="row justify-content-center mt-2" *ngIf="submitted">
+                <div class="col-md-12 rounded shadow py-4">
+                    <h2 style="color: rgb(235, 15, 140)">Student Details</h2>
+                    <p>First Name:<strong>{{student.fname}}</strong></p>
+                    <p>Last Name:<strong>{{student.lname}}</strong></p>
+                    <p>Age:<strong>{{student.age}}</strong></p>
+                    <p>Email:<strong>{{student.email}}</strong></p>
+                    <p>Mobile:<strong>{{student.mobile}}</strong></p>
+                    <p>City:<strong>{{student.city}}</strong></p>
+                    <p>Gender:<strong>{{student.gender}}</strong></p>
+
+                    <p>Password:<strong>{{student.password}}</strong></p>
+                    <p>Confirm Password:<strong>{{student.confirmPassword}}</strong></p>
+
+                </div>
+            </div>
+            </div>
+
+        
+        <div class="col-md-6 border border-primary" id="table" *ngIf="show">
+            <h2 style="color: rgb(235, 15, 140)">Student Registration Details Table Format</h2>
+            <table class="table table-bordered " style="border: 1px solid black;">
+              <caption>Student Information</caption>
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Age</th>
+                  <th>Email</th>
+                  <th>Mobile</th>
+                  <th>City</th>
+                  <th>Gender</th>
+                  <th>Password</th>
+                  <th>Confirm Password</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of arrayStudent">
+                  <td>{{item.fname}}</td>
+                  <td>{{item.lname}}</td>
+                  <td>{{item.age}}</td>
+                  <td>{{item.email}}</td>
+                  <td>{{item.mobile}}</td>
+                  <td>{{item.city}}</td>
+                  <td>{{item.gender}}</td>
+                  <td>{{item.password}}</td>
+                  <td>{{item.confirmPassword}}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- </div> -->
+        
+       

@@ -1,0 +1,9 @@
+input.ng-invalid.ng-touched{
+    border: 2px solid rgb(238, 34, 34);
+
+}
+label{
+    font-size: x-large;
+    font-weight: bold;
+    color: rgb(54, 6, 185);
+}

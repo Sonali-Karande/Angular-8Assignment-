@@ -14,6 +14,8 @@ import { SimpleformComponent } from './simpleform/simpleform.component';
 import { SimpleformwithvalidationComponent } from './simpleformwithvalidation/simpleformwithvalidation.component';
 import { TemplateformsassComponent } from './templateformsass/templateformsass.component';
 import { ReactiveformassComponent } from './reactiveformass/reactiveformass.component';
+import { Tdfass2advanceComponent } from './tdfass2advance/tdfass2advance.component';
+import { Reactiveformasss22Component } from './reactiveformasss22/reactiveformasss22.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,16 @@ import { ReactiveformassComponent } from './reactiveformass/reactiveformass.comp
     SimpleformComponent,
     SimpleformwithvalidationComponent,
     TemplateformsassComponent,
-    ReactiveformassComponent
+    ReactiveformassComponent,
+    Tdfass2advanceComponent,
+    Reactiveformasss22Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

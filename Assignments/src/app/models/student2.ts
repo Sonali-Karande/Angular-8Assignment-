@@ -11,3 +11,14 @@ export class Student2{
     mno:number;
 
 }
+export class Student3 {
+    fname: string;
+    lname: string;
+    age: number
+    email: string;
+    mobile: number;
+    city: string;
+    gender: boolean;
+    password: string;
+    confirmPassword: string;
+}
