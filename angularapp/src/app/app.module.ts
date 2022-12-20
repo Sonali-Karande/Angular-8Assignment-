@@ -24,7 +24,10 @@ import { ClildNgonchangesComponent } from './clild-ngonchanges/clild-ngonchanges
 import { DirassgnComponent } from './dirassgn/dirassgn.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { ReactiveformsdemoComponent } from './reactiveformsdemo/reactiveformsdemo.component';
-
+import { Servicecopm1Component } from './servicecopm1/servicecopm1.component';
+import { Servicecopm2Component } from './servicecopm2/servicecopm2.component';
+    
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,13 +50,16 @@ import { ReactiveformsdemoComponent } from './reactiveformsdemo/reactiveformsdem
     ClildNgonchangesComponent,
     DirassgnComponent,
     SimpleformComponent,
-    ReactiveformsdemoComponent
+    ReactiveformsdemoComponent,
+    Servicecopm1Component,
+    Servicecopm2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

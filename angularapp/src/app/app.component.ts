@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Employee } from './models/employee';
 import { Product } from './models/product';
+import { DemoService } from './services/demo.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
 EmployeeRecords:any[]=[{eName:"Sonali",eDept:"HR"},
                       {eName:"Arjun",eDept:"Manager"},];
 
-  constructor() {
+  constructor(private _demoService: DemoService) {
     this.empObject.push({ id:111,name:'Sonali',salary:90000,age:32,gender:'Female'});
     this.empObject.push({ id:122,name:'Swati',salary:80000,age:31,gender:'Female'});
     this.empObject.push({ id:133,name:'Yogesh',salary:60000,age:35,gender:'Male'});
@@ -42,4 +43,15 @@ destroy()
     this.product.name=this.name;
     this.product.price=this.price;
   }
+
+  
+userData:any=[];
+  ngOnInit(): void {
+      this._demoService.getUsersData().subscribe(data => {
+        console.log('getting data from api', data)
+        this.userData=data;     
+      })
+    }
+
+
 }

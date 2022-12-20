@@ -34,7 +34,7 @@ emailRegex="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
 
   genders=[
     {id:`1`,value:`Male`},
-    {id:`2`,value:`Female`}
+    {id:`2`,value:`Female`} 
   ];
   onSubmit() {
     console.log(this.myReactiveForm);

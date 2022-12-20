@@ -1,0 +1,63 @@
+<div class="container" style="background-color:gray;">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <h2 style="color:brown">Reactive Form Validation</h2>
+            <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="pname">Project Name:</label>
+                    <input type="text" class="form-control" name="" id="" placeholder="Enter Project Name.." minlength="5"
+                     formControlName="pname">
+                    <small class="text-danger"
+                        *ngIf="myReactiveForm.get('pname')?.invalid && myReactiveForm.get('pname').touched">
+                        <span *ngIf="myReactiveForm.get('pname')?.errors?.required">Please enter Project name
+                        </span>
+                        <span *ngIf="myReactiveForm.get('pname').errors['notAllowedNames']"> 
+                            {{myReactiveForm.get('pname').value }} is not allowed</span>
+                       
+                    </small>
+
+                </div>
+               
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+
+                    <input type="email" class="form-control" name="" id="" placeholder="Enter User email.."
+                        formControlName="email">
+                    <small class="text-danger"
+                        *ngIf="myReactiveForm.get('email')?.invalid && myReactiveForm.get('email').touched">
+                        <span *ngIf="myReactiveForm.get('email')?.errors?.required">Please enter email...
+                        </span>
+
+                        <span *ngIf="myReactiveForm.get('email')?.errors?.maxlength">
+                            maximum 32 characters required</span>
+                        <span *ngIf="myReactiveForm.get('email')?.errors?.pattern">
+                            Enter valid email</span>
+                            <span *ngIf="myReactiveForm.get('email').errors['emailNotAllowed']"> 
+                                {{myReactiveForm.get('email').value }} is not allowed</span>
+                    </small>
+
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="pstatus">Project Status:</label>
+                    <select class="form-control" formControlName="pstatus" id="city">
+                        <option value="Stable">Stable</option>
+                        <option value="Critical">Critical</option>
+                        <option value="Finished">Finished</option>
+                    </select>
+                </div>
+
+              
+             
+                <div class="form-group">
+
+                    <button class="btn btn-success mt-4" [disabled]="myReactiveForm.valid">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>

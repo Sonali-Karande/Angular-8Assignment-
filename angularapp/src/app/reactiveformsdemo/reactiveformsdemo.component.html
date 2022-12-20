@@ -55,8 +55,11 @@
                     <label>Skills</label>
                     <ng-container *ngFor="let skill of this.myReactiveForm.get('skills').controls;index as i">
                         <input type="text" class="form-control mt-2" placeholder="Add Skills" formControlName={{i}}>
+                <button class="btn btn-danger" (click)="removeFormControl(i)">Remove Skills</button><br>
+
                     </ng-container>
                     <button class="btn btn-light btn-sm mt-4 btn-add" (click)="OnAddSkill()"><i>+</i>Add Skills</button>
+
                 </div>
 
                     <button class="btn btn-success mt-4" [disabled]="!myReactiveForm.valid">Submit</button>

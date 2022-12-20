@@ -16,6 +16,7 @@ import { TemplateformsassComponent } from './templateformsass/templateformsass.c
 import { ReactiveformassComponent } from './reactiveformass/reactiveformass.component';
 import { Tdfass2advanceComponent } from './tdfass2advance/tdfass2advance.component';
 import { Reactiveformasss22Component } from './reactiveformasss22/reactiveformasss22.component';
+import { Reactiveass33Component } from './reactiveass33/reactiveass33.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { Reactiveformasss22Component } from './reactiveformasss22/reactiveformas
     TemplateformsassComponent,
     ReactiveformassComponent,
     Tdfass2advanceComponent,
-    Reactiveformasss22Component
+    Reactiveformasss22Component,
+    Reactiveass33Component
   ],
   imports: [
     BrowserModule,
