@@ -9,7 +9,11 @@ export class Student{
           mobile:any;
           email:string;
 }
-
+export class Emp{
+  id:any;
+  name:string;
+  salary:any;
+}
 // export function passwordMatch(password:string,confirmPassword:string){
 // return function(form:AbstractControl)
 // {

@@ -1,0 +1,18 @@
+
+<h2 style="color: rgb(51, 0, 255);">Component 1</h2>
+<h4 style="color: rgb(76, 0, 255);">Employee Details</h4>
+
+<div *ngFor="let data of emp" style="background-color: palevioletred;color:white">
+     {{data}}
+</div>
+<div class="box2">
+   
+    <br><br>
+    <input type="text" placeholder="Update personId.." #pid>
+    <input type="text" placeholder="Update name.." #uname>
+    <input type="text" placeholder="Update salary.." #sal>
+    <button (click)="updateUserName(pid,uname,sal)">Update</button>
+</div>
+
+
+

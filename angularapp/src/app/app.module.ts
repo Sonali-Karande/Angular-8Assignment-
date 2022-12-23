@@ -28,6 +28,10 @@ import { Servicecopm1Component } from './servicecopm1/servicecopm1.component';
 import { Servicecopm2Component } from './servicecopm2/servicecopm2.component';
     
 import {HttpClientModule} from '@angular/common/http';
+import { Comp1subjectComponent } from './comp1subject/comp1subject.component';
+import { Comp2subjectComponent } from './comp2subject/comp2subject.component';
+import { Comp3subjectComponent } from './comp3subject/comp3subject.component';
+import { Comp4subjectComponent } from './comp4subject/comp4subject.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +56,11 @@ import {HttpClientModule} from '@angular/common/http';
     SimpleformComponent,
     ReactiveformsdemoComponent,
     Servicecopm1Component,
-    Servicecopm2Component
+    Servicecopm2Component,
+    Comp1subjectComponent,
+    Comp2subjectComponent,
+    Comp3subjectComponent,
+    Comp4subjectComponent
   ],
   imports: [
     BrowserModule,

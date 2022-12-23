@@ -51,6 +51,10 @@ userData:any=[];
         console.log('getting data from api', data)
         this.userData=data;     
       })
+      this._demoService.getDataPosts().subscribe(result=>{
+        console.log('getting posts',result);
+        
+      })
     }
 
 

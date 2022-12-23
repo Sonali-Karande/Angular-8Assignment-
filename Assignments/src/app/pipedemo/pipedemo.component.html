@@ -1,0 +1,33 @@
+<p>pipedemo works!</p>
+<div style="border: 2px dotted yellow; width: 50vw;">
+<div style="color: brown;">
+    <h5>Date</h5>
+
+    Today's date "date":{{todaysDate |date}}<br>
+
+    Today's date "m/dd/yyyy":{{todaysDate |date:'m/dd/yyyy'}}<br>
+    Today's date "m/dd/yy":{{todaysDate |date:'m/dd/yy'}}<br>
+    Today's date "shortDate":{{todaysDate |date:'short'}}<br>
+    Today's date "fullDate'|uppercase":{{todaysDate |date:'fullDate'|uppercase}}<br>
+    Today's date "'fullDate'|lowercase":{{todaysDate |date:'fullDate'|lowercase}}<br>
+</div>
+<div style="color: brown;">
+
+<h5>Async</h5>
+
+    get Values:{{obser|async}}
+</div>
+<div style="color: brown;">
+
+<h5>Currency</h5>
+
+    Currency Pipe:{{curPipePrice|currency:'INR'}}<br>
+    Currency Pipe:{{curPipePrice|currency:'USD'}}<br>
+    Currency Pipe:{{curPipePrice|currency:'CAD':'symbol-narrow'}}<br>
+<h5>custom pipe</h5>
+
+    Currency Pipe:total digits in {{curPipePrice1}}={{curPipePrice1|count}}<br>
+    Currency Pipe:total digits in {{curPipePrice}}={{curPipePrice|count}}<br>
+<h5>json pipe</h5>
+    {{obj|json}}
+</div></div>

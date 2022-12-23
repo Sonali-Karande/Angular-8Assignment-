@@ -17,6 +17,14 @@ import { ReactiveformassComponent } from './reactiveformass/reactiveformass.comp
 import { Tdfass2advanceComponent } from './tdfass2advance/tdfass2advance.component';
 import { Reactiveformasss22Component } from './reactiveformasss22/reactiveformasss22.component';
 import { Reactiveass33Component } from './reactiveass33/reactiveass33.component';
+import { Subject1Component } from './subject1/subject1.component';
+import { Subject2Component } from './subject2/subject2.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { CountPipe } from './count.pipe';
+import { FilterpipeComponent } from './filterpipe/filterpipe.component';
+import { FilterPipe } from './filter.pipe';
+import { PipesassignComponent } from './pipesassign/pipesassign.component';
+import { PipegenderPipe } from './pipegender.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +41,15 @@ import { Reactiveass33Component } from './reactiveass33/reactiveass33.component'
     ReactiveformassComponent,
     Tdfass2advanceComponent,
     Reactiveformasss22Component,
-    Reactiveass33Component
+    Reactiveass33Component,
+    Subject1Component,
+    Subject2Component,
+    PipedemoComponent,
+    CountPipe,
+    FilterpipeComponent,
+    FilterPipe,
+    PipesassignComponent,
+    PipegenderPipe
   ],
   imports: [
     BrowserModule,
