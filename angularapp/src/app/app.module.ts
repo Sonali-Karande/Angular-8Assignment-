@@ -32,6 +32,11 @@ import { Comp1subjectComponent } from './comp1subject/comp1subject.component';
 import { Comp2subjectComponent } from './comp2subject/comp2subject.component';
 import { Comp3subjectComponent } from './comp3subject/comp3subject.component';
 import { Comp4subjectComponent } from './comp4subject/comp4subject.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +65,12 @@ import { Comp4subjectComponent } from './comp4subject/comp4subject.component';
     Comp1subjectComponent,
     Comp2subjectComponent,
     Comp3subjectComponent,
-    Comp4subjectComponent
+    Comp4subjectComponent,
+    AboutusComponent,
+    ProductComponent,
+    ContactusComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
