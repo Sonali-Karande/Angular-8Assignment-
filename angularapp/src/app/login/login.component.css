@@ -1,0 +1,12 @@
+
+.container{
+    border: 2px solid blue;
+    align-items:center;
+    /* background-color: gray; */
+    align-content: center;
+height: 50vh;
+width: 50vw;
+position: absolute;
+left: 50px;
+border: 2 px solid blueviolet;
+}

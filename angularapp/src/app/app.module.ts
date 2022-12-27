@@ -37,6 +37,15 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { ImagesComponent } from './images/images.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TvComponent } from './product/tv/tv.component';
+import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+import { TabletsComponent } from './product/tablets/tablets.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { PsotdetailsComponent } from './psotdetails/psotdetails.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,7 +79,15 @@ import { LoginComponent } from './login/login.component';
     ProductComponent,
     ContactusComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ImagesComponent,
+    PagenotfoundComponent,
+    LaptopComponent,
+    TvComponent,
+    WashingmachineComponent,
+    TabletsComponent,
+    DemopostComponent,
+    PsotdetailsComponent
   ],
   imports: [
     BrowserModule,

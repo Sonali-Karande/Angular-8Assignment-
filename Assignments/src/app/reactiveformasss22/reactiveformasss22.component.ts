@@ -29,7 +29,7 @@ emailRegex="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
       'gender': new FormControl('Male', [Validators.required]),
       'password': new FormControl('',[Validators.required,Validators.maxLength(32),Validators.minLength(8)]),
       'confirmPassword': new FormControl('',[Validators.required,Validators.maxLength(32),Validators.minLength(8)])
-    })
+    },[passwordMatch('password','confirmPassword')])
   }
 
   genders=[
@@ -41,3 +41,7 @@ emailRegex="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
     this.myReactiveForm.reset();
   }
 }
+function passwordMatch(arg0: string, arg1: string): import("@angular/forms").ValidatorFn {
+  throw new Error('Function not implemented.');
+}
+
