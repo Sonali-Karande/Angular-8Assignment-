@@ -10,6 +10,7 @@ export class CustdirDirective {
     // el.nativeElement.style.backgroundColor='grey';
     //el.nativeElement.style.display='none';
 render.setStyle(el.nativeElement,'backgroundColor','yellow');
+render.setStyle(el.nativeElement,'color','white');
   }
 
 }

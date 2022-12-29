@@ -12,7 +12,7 @@ import { DirectivesassComponent } from './directivesass/directivesass.component'
 import { NgCourcesComponent } from './ng-cources/ng-cources.component';
 import { NgswithassComponent } from './ngswithass/ngswithass.component';
 import { AttriComponent } from './attri/attri.component';
-import { CustdirDirective } from './custdir.directive';
+// import { CustdirDirective } from './custdir.directive';
 import { CustPassComponent } from './cust-pass/cust-pass.component';
 import { MatchValueDirective } from './match-value.directive';
 import { EmployeeComponent } from './employee/employee.component';
@@ -34,17 +34,15 @@ import { Comp3subjectComponent } from './comp3subject/comp3subject.component';
 import { Comp4subjectComponent } from './comp4subject/comp4subject.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ImagesComponent } from './images/images.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { TvComponent } from './product/tv/tv.component';
-import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
-import { TabletsComponent } from './product/tablets/tablets.component';
+
 import { DemopostComponent } from './demopost/demopost.component';
 import { PsotdetailsComponent } from './psotdetails/psotdetails.component';
+import { ProductsModule } from './product/products.module';
+import { ElectonicsModule } from './electronics/electonics.module';
 
 @NgModule({
   declarations: [
@@ -57,7 +55,7 @@ import { PsotdetailsComponent } from './psotdetails/psotdetails.component';
     NgCourcesComponent,
     NgswithassComponent,
     AttriComponent,
-    CustdirDirective,
+    // CustdirDirective,
     CustPassComponent,
     MatchValueDirective,
     EmployeeComponent,
@@ -76,20 +74,19 @@ import { PsotdetailsComponent } from './psotdetails/psotdetails.component';
     Comp3subjectComponent,
     Comp4subjectComponent,
     AboutusComponent,
-    ProductComponent,
     ContactusComponent,
     HomeComponent,
     LoginComponent,
     ImagesComponent,
     PagenotfoundComponent,
-    LaptopComponent,
-    TvComponent,
-    WashingmachineComponent,
-    TabletsComponent,
+ 
     DemopostComponent,
     PsotdetailsComponent
+  
   ],
   imports: [
+    ProductsModule ,//feature module improve file size before approuting module 
+    ElectonicsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

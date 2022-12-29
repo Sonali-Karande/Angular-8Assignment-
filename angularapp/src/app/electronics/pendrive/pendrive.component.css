@@ -2,8 +2,9 @@
     display: inline-block;
     margin: 15px 10px 10px;
     width: 40%;
-    height: 50%;
+    height: 30%;
 }
 img{
-    height: 40%;
+    height: 50%;
+    width:60%;
 }
