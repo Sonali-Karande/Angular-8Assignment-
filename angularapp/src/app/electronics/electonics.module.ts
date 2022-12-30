@@ -12,7 +12,7 @@ import { UtilityModule } from '../models/utility.module';
 
 
 const eleRoutes:Routes=[
-  {path:'electronics',component:ElectronicsComponent,children:[
+  {path:'',component:ElectronicsComponent,children:[
   
     {path:'headphone',component:HeadphonesComponent},
     {path:'computeraccessories',component:ComputeraccessoriesComponent},
@@ -39,4 +39,11 @@ const eleRoutes:Routes=[
     RouterModule
   ]
 })
-export class ElectonicsModule { }
+export class ElectonicsModule {
+  constructor(){
+    console.log('ElectonicsModule called');
+
+  }
+ }
+
+           

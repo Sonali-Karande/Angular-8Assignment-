@@ -31,7 +31,7 @@ form.controls[`course`].setValue(`Angular`);
 form.controls[`gender`].setValue(`Male`)
   // this.saveEmployeeData(this.employee);
   }
-
+ 
   saveEmployeeData(employee:Employee1) {
    console.log(employee.course);
    console.log(employee.username);

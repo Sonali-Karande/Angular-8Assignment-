@@ -10,7 +10,7 @@ import { UtilityModule } from '../models/utility.module';
 
 
 const prodRoutes:Routes=[
-  {path:'product',component:ProductComponent,children:[
+  {path:'',component:ProductComponent,children:[
   
     {path:'laptop',component:LaptopComponent},
     {path:'tablets',component:TabletsComponent},
@@ -37,4 +37,9 @@ const prodRoutes:Routes=[
     RouterModule
   ]
 })
-export class ProductsModule { }
+export class ProductsModule { 
+  constructor(){
+    console.log('ProductsModule called');
+    
+  }
+}

@@ -9,9 +9,10 @@ import { DemoService } from './services/demo.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  uName:string='i am from parent component dfgbhnjm,';
   public uid:number;
   title = 'angularapp';
-  empInfo:Employee=new Employee();
+  // empInfo:Employee=new Employee();
   empObject=[]; //array
 EmployeeRecords:any[]=[{eName:"Sonali",eDept:"HR"},
                       {eName:"Arjun",eDept:"Manager"},];

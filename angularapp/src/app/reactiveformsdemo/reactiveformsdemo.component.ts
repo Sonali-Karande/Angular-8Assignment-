@@ -1,18 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { CanComponentLeave } from '../un-saved-changes.guard';
 
 @Component({
   selector: 'app-reactiveformsdemo',
   templateUrl: './reactiveformsdemo.component.html',
   styleUrls: ['./reactiveformsdemo.component.css']
 })
-export class ReactiveformsdemoComponent implements OnInit {
+export class ReactiveformsdemoComponent implements OnInit,CanComponentLeave {
   myReactiveForm: FormGroup;
   constructor(private _fb:FormBuilder) {
     this.createForm();
   
   }
+  canLeave():boolean{
+    if(this.myReactiveForm.dirty)
+    {
+      return window.confirm('You have some unsaved changes.save it before leaving');
+    }
+    return true;
+  }
+
 
   ngOnInit() {
     // setTimeout(() => {
@@ -92,8 +101,10 @@ if (this.notAllowedNames.indexOf(control.value)!==-1) {
 
 
  submitted:boolean=false;
+ 
   onSubmit() {
     this.submitted=true;
+
     console.log(this.myReactiveForm);
 
 

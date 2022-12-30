@@ -41,8 +41,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 import { DemopostComponent } from './demopost/demopost.component';
 import { PsotdetailsComponent } from './psotdetails/psotdetails.component';
-import { ProductsModule } from './product/products.module';
-import { ElectonicsModule } from './electronics/electonics.module';
+import { OrderlistComponent } from './orders/orderlist/orderlist.component';
+import { AdduserComponent } from './adduser/adduser.component';
 
 @NgModule({
   declarations: [
@@ -81,12 +81,15 @@ import { ElectonicsModule } from './electronics/electonics.module';
     PagenotfoundComponent,
  
     DemopostComponent,
-    PsotdetailsComponent
+    PsotdetailsComponent,
+    AdduserComponent
+  
   
   ],
   imports: [
-    ProductsModule ,//feature module improve file size before approuting module 
-    ElectonicsModule,
+    // ProductsModule ,//feature module improve file size //before approuting module 
+    // ElectonicsModule,//egger loading
+    // OrdersModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -96,4 +99,10 @@ import { ElectonicsModule } from './electronics/electonics.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log('AppModule called');
+
+  }
+  
+}
