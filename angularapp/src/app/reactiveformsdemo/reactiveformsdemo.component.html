@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6 text-left rounded shadow py-5">
+        <div class="col-md-6 text-left rounded shadow py-5 mt-5">
             <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
                 <div formGroupName="userDetails">
                     <div class="form-group">
@@ -70,10 +70,29 @@
             <div class="col-md-6-rounded shadow py-4">
                 <h2>Reactive Form Data</h2>
                 <p>User Name:<strong>{{myReactiveForm.get('userDetails.username').value}}</strong></p>
-                <p>User Email:<strong>{{myReactiveForm.get('userDetails.username').value}}</strong></p>
+                <p>User Email:<strong>{{myReactiveForm.get('userDetails.email').value}}</strong></p>
                 <p>Selected Course:<strong>{{myReactiveForm.get('course').value}}</strong></p>
                 <p>Gender:<strong>{{myReactiveForm.get('gender').value}}</strong></p>
+                <p>Skills:<strong>{{myReactiveForm.get('skills').value}}</strong></p>
             </div>
         </div>
     </div>
 </div>
+<table class="table table-bordered">
+    <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Gender</th>
+            <th>Skills</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stud of arrayStudent">
+            <td>{{stud.username}}</td>
+            <td>{{stud.email}}</td>
+            <td>{{stud.course}}</td>
+            <td>{{stud.gender}}</td>
+            <td>{{stud.skills}}</td>
+        </tr>
+    </tbody>
+</table>

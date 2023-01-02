@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../services/firebase.service';
 import { RapidapiService } from '../services/rapidapi.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { RapidapiService } from '../services/rapidapi.service';
 })
 export class RapidapiComponent implements OnInit {
 
-  constructor(private _rapidAPIService:RapidapiService) { }
+  constructor(private _rapidAPIService:RapidapiService,private _firebaseService:FirebaseService) { }
   apiNews:any=[];
   apiQuote:any=[];
   ngOnInit() {
@@ -21,5 +22,11 @@ console.log('Rapid API Quote Data',this.apiQuote);
 
     })
   }
+  createPost(){
+    this._firebaseService.createPost().subscribe(res=>{
 
+      console.log('firebase post',res);
+      
+    })
+  }
 }

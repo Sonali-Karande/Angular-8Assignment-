@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { FireBasePost } from '../models/firebasepost';
+import { FirebaseService } from '../services/firebase.service';
 import { CanComponentLeave } from '../un-saved-changes.guard';
 
 @Component({
@@ -10,7 +12,8 @@ import { CanComponentLeave } from '../un-saved-changes.guard';
 })
 export class ReactiveformsdemoComponent implements OnInit,CanComponentLeave {
   myReactiveForm: FormGroup;
-  constructor(private _fb:FormBuilder) {
+  firebasePost:FireBasePost;
+  constructor(private _fb:FormBuilder,private _firebaseService:FirebaseService) {
     this.createForm();
   
   }
@@ -48,6 +51,7 @@ export class ReactiveformsdemoComponent implements OnInit,CanComponentLeave {
     {id:`1`,value:`Male`},
     {id:`2`,value:`Female`}
   ];
+
   createForm() {
     // this.myReactiveForm = new FormGroup({
     //   // 'username':new FormControl('CodemindTechnology',Validators.required),
@@ -101,12 +105,29 @@ if (this.notAllowedNames.indexOf(control.value)!==-1) {
 
 
  submitted:boolean=false;
- 
+ arrayStudent=[];
+
   onSubmit() {
     this.submitted=true;
-
     console.log(this.myReactiveForm);
+    console.log(this.myReactiveForm['controls'].userDetails['controls'].username.value);
+    
+    this.firebasePost=new FireBasePost();
+ this.firebasePost.username=this.myReactiveForm['controls'].userDetails['controls'].username.value;
+ this.firebasePost.email=this.myReactiveForm['controls'].userDetails['controls'].email.value;
+ this.firebasePost.course=this.myReactiveForm['controls'].course.value;
+ this.firebasePost.gender=this.myReactiveForm['controls'].gender.value;
+ this.firebasePost.skills=this.myReactiveForm['controls'].skills.value;
+console.log('Firebase Post Classs',this.firebasePost);
 
+
+  this._firebaseService.createPostDataReactiveForm(this.firebasePost).subscribe(res=>{
+    console.log('Post from Reactive Form',res);
+    
+  })
+  this.arrayStudent.push(this.myReactiveForm.value);
+    // this.arrayStudent=this.myReactiveForm.value;
+ this.myReactiveForm.reset();
 
   }
   OnAddSkill(){
