@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Employee } from './models/employee';
 import { Product } from './models/product';
 import { DemoService } from './services/demo.service';
+import { PostService } from './services/post.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ export class AppComponent {
 EmployeeRecords:any[]=[{eName:"Sonali",eDept:"HR"},
                       {eName:"Arjun",eDept:"Manager"},];
 
-  constructor(private _demoService: DemoService) {
+  constructor(private _demoService: DemoService,private _postService:PostService) {
     this.empObject.push({ id:111,name:'Sonali',salary:90000,age:32,gender:'Female'});
     this.empObject.push({ id:122,name:'Swati',salary:80000,age:31,gender:'Female'});
     this.empObject.push({ id:133,name:'Yogesh',salary:60000,age:35,gender:'Male'});
@@ -57,6 +58,12 @@ userData:any=[];
         
       })
     }
-
+    DeletePost()
+    {
+      this._postService.deletePostById(1).subscribe(res=>{
+        console.log(res);
+        
+      })
+    }
 
 }

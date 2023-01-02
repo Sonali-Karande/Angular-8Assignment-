@@ -16,4 +16,8 @@ export class PostService {
   getPostById(id){
     return this.httpClient.get(`${devURL}posts/`+id);
   }
+  deletePostById(id)
+  {
+    return this.httpClient.delete(`${devURL}posts/`+id);
+  }
 }

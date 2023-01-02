@@ -18,3 +18,16 @@ export class UnSavedChangesGuard implements CanDeactivate<CanComponentLeave> {
   return true;
 }
 }
+
+
+// export class UnSavedCHnagesGuard implements CanDeactivate<AdduserComponent> {
+
+//   canDeactivate(component: AdduserComponent) {
+//     if(component.userName.dirty) {
+//       return window.confirm('You have unsaved changes. Are you sure want to navigate?');
+//     } else {
+//       return true;
+//     }
+//   }
+  
+// }

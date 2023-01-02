@@ -43,6 +43,7 @@ import { DemopostComponent } from './demopost/demopost.component';
 import { PsotdetailsComponent } from './psotdetails/psotdetails.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
 import { AdduserComponent } from './adduser/adduser.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { AdduserComponent } from './adduser/adduser.component';
  
     DemopostComponent,
     PsotdetailsComponent,
-    AdduserComponent
+    AdduserComponent,
+    RapidapiComponent
   
   
   ],

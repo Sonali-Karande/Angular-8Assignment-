@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 import { PsotdetailsComponent } from './psotdetails/psotdetails.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
 import { ReactiveformsdemoComponent } from './reactiveformsdemo/reactiveformsdemo.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { UnSavedChangesGuard } from './un-saved-changes.guard';
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: 'product', canActivate:[AuthGuard], loadChildren: './product/products.module#ProductsModule'},
 
   { path:'orders',loadChildren:'./orders/orders.module#OrdersModule'},//lazy loading
+  {path:'rapidapi',component:RapidapiComponent},
 
   {path:'**',component:PagenotfoundComponent}
 
