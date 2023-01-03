@@ -58,7 +58,7 @@ export class HookComponent implements OnInit,OnChanges,DoCheck,AfterContentInit 
   console.log(this.parentData);
       //console.log(this.parentData);
   
-      console.log(" ngOnChanges called");
+      console.log(" ngOnChanges called",changes);
       // for (const propname in changes) {
       //   const prop = changes[propname];
   

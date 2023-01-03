@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { FireBasePost } from '../models/firebasepost';
 
 @Injectable({
@@ -10,16 +11,24 @@ export class FirebaseService {
   constructor(private _httpClient:HttpClient) {
     
    }
+   users:any[]=[{
+    id:'101',name:'sonali',gender:'female'},
+   {id:'102',name:'yogesh',gender:'male'},
+   {id:'103',name:'arjun',gender:'male'}
+   ];
    createPost()
    {
     let postData={
       title:'this is the angular crud',
       content:'this is the  firebase  crud operation with post'
     }
-   return this._httpClient.post(this.url+'post.json',postData);
+   return this._httpClient.post(this.url+'posts.json',postData);
    }
    createPostDataReactiveForm(fireBasePost:FireBasePost){
-    return this._httpClient.post(this.url+'reactiveformposts.json',fireBasePost);
+    return this._httpClient.post(this.url+'posts.json',fireBasePost);
 
+  }
+  getPostDataFirebase():Observable<any>{
+    return this._httpClient.get(this.url+ 'posts.json')
   }
 }

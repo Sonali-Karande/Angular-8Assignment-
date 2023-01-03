@@ -12,7 +12,9 @@ export class PostService {
   getPostsss():Observable<any> {
     return this.httpClient.get(`${devURL}posts`);
   }
-
+  getPostsPhotos():Observable<any> {
+    return this.httpClient.get(`${devURL}photos`);
+  }
   getPostById(id){
     return this.httpClient.get(`${devURL}posts/`+id);
   }

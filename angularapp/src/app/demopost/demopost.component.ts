@@ -9,6 +9,7 @@ import { PostService } from '../services/post.service';
 })
 export class DemopostComponent implements OnInit {
   arrPosts: Posts[] = [];
+  arrPhotos: Posts[] = [];
   constructor(private _postService: PostService) { }
 
   ngOnInit() {
@@ -18,7 +19,12 @@ export class DemopostComponent implements OnInit {
       console.log('array data', this.arrPosts);
 
     })
+    this._postService.getPostsPhotos().subscribe(res1 => {
+      console.log('jsonplaceholder', res1);
+      this.arrPhotos = res1;
+      console.log('arrPhotossssssssss', this.arrPhotos);
 
+    })
   }
 
 }

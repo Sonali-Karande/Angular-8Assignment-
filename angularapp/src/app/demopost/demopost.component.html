@@ -25,3 +25,30 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-left rounded shadow py-5">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>albumId</th>
+                        <th>id</th>
+                        <th>thumbnailUrl</th>
+                        <th>title</th>
+                        <th>url</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let post of arrPhotos">
+                        <td>{{post.albumId}}</td>
+                        <td>{{post.id}}</td>
+                        <td>{{post.thumbnailUrl}}</td>
+                        <td>{{post.title}}</td>
+                        <td>{{post.url}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
