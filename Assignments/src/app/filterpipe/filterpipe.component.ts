@@ -37,5 +37,15 @@ export class FilterpipeComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  AddProduct(pname)
+  {
+    this.productArr.push(
+      {
+        sno: 5,
+        name: pname.value,
+        price: '45000 Rs',
+        availability: 'Available'
+      }
+    )
+  }
 }

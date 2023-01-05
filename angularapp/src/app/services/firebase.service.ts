@@ -28,7 +28,7 @@ export class FirebaseService {
     return this._httpClient.post(this.url+'posts.json',fireBasePost);
 
   }
-  getPostDataFirebase():Observable<any>{
+  getPostDataFirebase(){
     return this._httpClient.get(this.url+ 'posts.json')
   }
 }

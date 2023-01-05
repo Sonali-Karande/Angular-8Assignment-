@@ -24,13 +24,20 @@ export class ReactiveformsdemoComponent implements OnInit,CanComponentLeave {
     }
     return true;
   }
-
+serverDtata=[];
 
   ngOnInit() {
-    this._firebaseService.getPostDataFirebase().subscribe(res=>{
-      console.log('getPostDataFirebase',res);
+    // this._firebaseService.getPostDataFirebase().subscribe(res=>{
+    //   console.log('getPostDataFirebase',res);
+     // this.myReactiveForm.value.push(res);
+    //   this.serverDtata.push(res);
+    //   console.log('serverrrrrrrrrrdata',this.serverDtata);
+    //   this.serverDtata=res.id;
+    //   console.log('idddd',this.serverDtata);
       
-    }) 
+      
+      
+    //  }) 
     console.log("==========from operator==============================================");
     
     const data=from(this._firebaseService.users) ;//from operator is used to convert into obserrable
@@ -109,8 +116,11 @@ source1.pipe(
     )
     .subscribe(res=>{
       console.log('after manipuliting data',res);
+      this.serverDtata.push(res);
+      console.log('serverrrrrrrrrrdata',this.serverDtata);
       
     })
+       
   }
 
   genders=[
@@ -184,14 +194,14 @@ if (this.notAllowedNames.indexOf(control.value)!==-1) {
  this.firebasePost.course=this.myReactiveForm['controls'].course.value;
  this.firebasePost.gender=this.myReactiveForm['controls'].gender.value;
  this.firebasePost.skills=this.myReactiveForm['controls'].skills.value;
-//console.log('Firebase Post Classs',this.firebasePost);
+console.log('Firebase Post Classs',this.firebasePost);
 
 
  this._firebaseService.createPostDataReactiveForm(this.firebasePost).subscribe(res=>{
    console.log('Post from Reactive Form',res);
     
  })
-  this.arrayStudent.push(this.myReactiveForm.value);
+  //this.arrayStudent.push(this.myReactiveForm.value);
     // this.arrayStudent=this.myReactiveForm.value;
 //  this.myReactiveForm.reset();
 

@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { AdduserComponent } from './adduser/adduser.component';
@@ -7,6 +7,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { ManageproComponent } from './managepro/managepro.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 import { PsotdetailsComponent } from './psotdetails/psotdetails.component';
@@ -25,7 +26,6 @@ const routes: Routes = [
   
 
   {path:'contactus',component:ContactusComponent},
-  {path:'contactus',component:ContactusComponent},
   {path:'post',component:DemopostComponent},
   {path:'psotdetails/:id',component:PsotdetailsComponent},
   {path:'adduser',component:AdduserComponent,canDeactivate:[UnSavedChangesGuard]},
@@ -36,6 +36,7 @@ const routes: Routes = [
 
   { path:'orders',loadChildren:'./orders/orders.module#OrdersModule'},//lazy loading
   {path:'rapidapi',component:RapidapiComponent},
+  {path:'managepro',component:ManageproComponent},
 
   {path:'**',component:PagenotfoundComponent}
 

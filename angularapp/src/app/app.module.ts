@@ -44,6 +44,8 @@ import { PsotdetailsComponent } from './psotdetails/psotdetails.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { RapidapiComponent } from './rapidapi/rapidapi.component';
+import { ManageproComponent } from './managepro/managepro.component';
+import { CrudwithfirebaseComponent } from './crudwithfirebase/crudwithfirebase.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,9 @@ import { RapidapiComponent } from './rapidapi/rapidapi.component';
     DemopostComponent,
     PsotdetailsComponent,
     AdduserComponent,
-    RapidapiComponent
+    RapidapiComponent,
+    ManageproComponent,
+    CrudwithfirebaseComponent
   
   
   ],
