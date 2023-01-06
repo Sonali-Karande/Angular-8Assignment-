@@ -51,6 +51,7 @@ onAddProduct(id,name,price){
   })
 }
 this.onSaveProduct();
+
 }
 
 onDeleteProduct(id){

@@ -4,6 +4,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { AuthGuard } from './auth.guard';
 import { ContactusComponent } from './contactus/contactus.component';
+import { CrudwithfirebaseComponent } from './crudwithfirebase/crudwithfirebase.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -25,7 +26,7 @@ const routes: Routes = [
   { path:'aboutus',canActivate:[AuthGuard],component:AboutusComponent},//lcalhost://4200/aboutus
   
 
-  {path:'contactus',component:ContactusComponent},
+  // {path:'contactus',component:ContactusComponent},
   {path:'post',component:DemopostComponent},
   {path:'psotdetails/:id',component:PsotdetailsComponent},
   {path:'adduser',component:AdduserComponent,canDeactivate:[UnSavedChangesGuard]},
@@ -37,7 +38,8 @@ const routes: Routes = [
   { path:'orders',loadChildren:'./orders/orders.module#OrdersModule'},//lazy loading
   {path:'rapidapi',component:RapidapiComponent},
   {path:'managepro',component:ManageproComponent},
-
+  {path:'crudwithfirebase',component:CrudwithfirebaseComponent},
+  
   {path:'**',component:PagenotfoundComponent}
 
 ];

@@ -1,0 +1,64 @@
+<div class="page-area  mb-2 bg-light text-dark">
+  <br>
+  <br>
+  
+  <h2 class="text-primary text-center">Angular CRUD</h2>
+
+<hr>
+  <div class="container border-top  border grey ">
+
+    <div class="row mt-5">
+  <h2 class="text-primary text-center">Manage User</h2>
+
+      <div class="col-md-6 p-3 mb-2 bg-white text-dark">
+        <h2 class="text-success">Add User</h2>
+        <form #userForm="ngForm" (ngSubmit)="onAddUser(userForm.value)">
+          <!-- <div class="form-group">
+            <label for="productId">User ID</label>
+            <input type="text" class="form-control" name="userId" autocomplete="off" ngModel required>
+          </div> -->
+          <div class="form-group">
+            <label for="productId">User Name</label>
+            <input type="text" class="form-control" name="name" autocomplete="off" ngModel required>
+          </div>
+          <div class="form-group mb-4">
+            <label for="pname">Technology</label>
+            <input type="text" class="form-control" name="technology" autocomplete="off" ngModel required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary mr-2">{{editMode?'Update User':'Add User'}}</button>&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-warning ml-2" (click)="fetchUser()">Fetch User</button>
+        </form>
+      </div>
+      <div class="col-md-6 p-3 mb-2 bg-white text-dark">
+        <h2 class="text-success">Users</h2> <!--dynamic title -->
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <!-- <th scope="col">User ID</th> -->
+
+              <th scope="col">Name</th>
+              <th scope="col">Technology</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+          
+            </tr>
+          </thead>
+          <tbody *ngIf="!fecthing">
+            <tr *ngFor="let user of users;index as i">
+              <!-- <td>{{user.userId}}</td> -->
+
+              <td>{{user.name}}</td>
+              <td>{{user.technology}}</td>
+              <td><button class="text-danger" (click)="onEditUser(user.userId,i)">Edit</button></td>
+              <td><button class="text-danger" (click)=" onDeleteUser(user.userId)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-center" *ngIf="fecthing">
+          <div class="spinner-border text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>Fetching Products...</div>
+      </div>
+    </div>
+  </div>

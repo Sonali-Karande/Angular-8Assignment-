@@ -1,10 +1,15 @@
 <p>managepro works!</p>
-<div class="page-area">
+<div class="page-area mb-2 bg-light text-dark">
+
+
+  
+  <h2 class="text-primary text-center">Angular CRUD</h2>
+
+  <div class="container border-top border grey">
+    <div class="row mt-5">
   <h2 class="text-primary text-center">Manage Product</h2>
 
-  <div class="container border-top pt-5">
-    <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 p-3 mb-2 bg-white text-dark">
         <h2 class="text-success">Add Product</h2>
         <form action="">
           <div class="form-group">
@@ -24,7 +29,7 @@
           <button class="btn btn-warning" (click)="onFetchProduct()">Fetch Product</button>
         </form>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 p-3 mb-2 bg-white text-dark">
         <h2 class="text-success">{{dataTitle | async}}</h2> <!--dynamic title -->
         <table class="table">
           <thead class="thead-dark">
